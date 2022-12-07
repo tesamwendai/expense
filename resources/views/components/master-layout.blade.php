@@ -24,6 +24,7 @@ $isAltMenu=0;
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
+    @vite(['resources/js/app.js'])
     @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
 
     @vite(['resources/layouts/vertical-light-menu/loader.js'])
