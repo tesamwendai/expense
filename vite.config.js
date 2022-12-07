@@ -33,6 +33,9 @@ export default defineConfig({
                 'resources/scss/dark/assets/custom.scss',
 
                 // Assets Files
+                // Login page
+                'resources/scss/light/assets/authentication/auth-boxed.scss',
+                'resources/scss/dark/assets/authentication/auth-boxed.scss',
 
                                 /**
                  * =======================
