@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
@@ -25,3 +26,17 @@ Route::get('login',function(){
 Route::get('register',function(){
     return view('auth.register');
 })->name('register');
+
+// make route post login
+// Route::post('login',[AuthenticatedSessionController::class,'store'])->name('login');
+// make route post register
+// Route::post('register',[AuthenticatedSessionController::class,'store'])->name('register');
+Route::post('register',[LoginController::class,'register'])->name('register');
+
+// make group middleware auth
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('home',function(){
+        return view('home.home');
+    })->name('home');
+    Route::get('logout',[LoginController::class,'logout'])->name('logout');
+});

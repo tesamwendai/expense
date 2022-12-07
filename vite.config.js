@@ -25,9 +25,11 @@ export default defineConfig({
 
                 // Secondary Files
                 'resources/scss/light/assets/scrollspyNav.scss',
+                'resources/scss/light/assets/pages/error/error.scss',
                 'resources/scss/light/assets/custom.scss',
 
                 'resources/scss/dark/assets/scrollspyNav.scss',
+                'resources/scss/dark/assets/pages/error/error.scss',
                 'resources/scss/dark/assets/custom.scss',
 
                 // Assets Files
@@ -100,8 +102,6 @@ export default defineConfig({
                  'resources/scss/dark/plugins/tomSelect/custom-tomSelect.scss',
  
                  'resources/layouts/vertical-light-menu/app.js',
-                 'resources/layouts/vertical-dark-menu/app.js',
-                 'resources/layouts/collapsible-menu/app.js',
  
             ],
             refresh: true,

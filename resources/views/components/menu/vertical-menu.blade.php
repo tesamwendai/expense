@@ -44,6 +44,9 @@
                             </div>
                         </a>
                         <ul class="collapse submenu list-unstyled {{ Request::is('*/dashboard/*') ? "show" : "" }}" id="dashboard" data-bs-parent="#accordionExample">
+                            <li class="{{ Request::routeIs('home') ? 'active' : '' }}">
+                                <a href="/dashboard/analytics"> Home </a>
+                            </li>
                             <li class="{{ Request::routeIs('analytics') ? 'active' : '' }}">
                                 <a href="/dashboard/analytics"> Analytics </a>
                             </li>

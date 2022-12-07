@@ -75,6 +75,7 @@ $isAltMenu=0;
     'error' => (Request::routeIs('404') ? true : false),
     'maintanence' => (Request::routeIs('maintenance') ? true : false),
     ])
+    
     <!-- BEGIN LOADER -->
     <x-layout-loader />
     <!--  END LOADER -->
@@ -167,13 +168,13 @@ $isAltMenu=0;
 
     @vite(['resources/layouts/vertical-light-menu/app.js'])
 
-    @if (Request::is('modern-light-menu/*'))
+    {{-- @if (Request::is('modern-light-menu/*'))
     @vite(['resources/layouts/vertical-light-menu/app.js'])
     @elseif ((Request::is('modern-dark-menu/*')))
     @vite(['resources/layouts/vertical-dark-menu/app.js'])
     @elseif ((Request::is('collapsible-menu/*')))
     @vite(['resources/layouts/collapsible-menu/app.js'])
-    @endif
+    @endif --}}
     <!-- END GLOBAL MANDATORY STYLES -->
 
     @endif
