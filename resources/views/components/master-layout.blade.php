@@ -22,7 +22,7 @@ $isAltMenu=0;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.ico')}}" />
     @vite(['resources/sass/app.scss','resources/js/app.js'])
 
     {{-- @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])

@@ -179,7 +179,7 @@
                                     &#x1F44B;
                                 </div>
                                 <div class="media-body">
-                                    <h5>Shaun Park</h5>
+                                    <h5>{{auth()->user()->name}}</h5>
                                     <p>Project Leader</p>
                                 </div>
                             </div>
