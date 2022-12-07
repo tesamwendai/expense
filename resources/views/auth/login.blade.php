@@ -32,7 +32,7 @@
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
 
-                                                <h2>Log In</h2>
+                                                <h2>LogIn</h2>
                                                 <p>Enter your email and password to login</p>
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger">
@@ -54,7 +54,7 @@
                                             <div class="col-12">
                                                 <div class="mb-4">
                                                     <label class="form-label">Password</label>
-                                                    <input type="text" name="password" value="quocthai123" class="form-control">
+                                                    <input type="password" name="password" value="quocthai123" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -72,7 +72,7 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button class="btn btn-secondary w-100">SIGN IN</button>
+                                                    <button class="btn btn-secondary w-100">LOGIN</button>
                                                 </div>
                                             </div>
 
@@ -136,7 +136,7 @@
 
             </div>
 
-            <!-- <button class="btn btn-sucess">Login</button> -->
+
             <!--  BEGIN CUSTOM SCRIPTS FILE  -->
             <x-slot:footerFiles>
 
