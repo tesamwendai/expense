@@ -5,14 +5,9 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                /**
-                 * ================================
-                 *      Will Config images Files
-                 * =================================
-                 */
-                 'resources/js/app.js',
+                'resources/sass/app.scss',
+                'resources/js/app.js',
                 
-
                 // favicon
                 // 'resources/images/favicon.ico',
                 // Loader

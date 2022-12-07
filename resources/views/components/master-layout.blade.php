@@ -23,9 +23,10 @@ $isAltMenu=0;
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
 
-    @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
-    @vite(['resources/layouts/vertical-light-menu/loader.js'])
+    {{-- @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
+    @vite(['resources/layouts/vertical-light-menu/loader.js']) --}}
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 
@@ -55,7 +56,6 @@ $isAltMenu=0;
     ])
 
     @endif
-    @vite('resources/js/app.js')
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {{$headerFiles}}
@@ -69,9 +69,6 @@ $isAltMenu=0;
     'maintanence' => (Request::routeIs('maintenance') ? true : false),
     ])
     
-    <!-- BEGIN LOADER -->
-    <x-layout-loader />
-    <!--  END LOADER -->
     {{--
 
     /*

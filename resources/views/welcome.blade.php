@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Expense</title>
-
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -270,7 +270,7 @@
 
 		<section class="bottom-copy">
 			<div class="dpd-20">
-				<img src="{{Vite::asset('resources/images/favicon.png')}}" alt="logo.png"/>
+				<img src="{{ asset('favicon.ico') }}" alt="logo.png"/>
 			</div>
 			<div>&copy; 2022 Quốc Thái Developer</div>
 		</section>

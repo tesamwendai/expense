@@ -59,13 +59,13 @@
     "file": "assets/mx.2dc22f53.svg",
     "src": "resources/images/1x1/mx.svg"
   },
-  "resources/images/1x1/my.svg": {
-    "file": "assets/my.aee5a643.svg",
-    "src": "resources/images/1x1/my.svg"
-  },
   "resources/images/1x1/ng.svg": {
     "file": "assets/ng.628a7cd7.svg",
     "src": "resources/images/1x1/ng.svg"
+  },
+  "resources/images/1x1/my.svg": {
+    "file": "assets/my.aee5a643.svg",
+    "src": "resources/images/1x1/my.svg"
   },
   "resources/images/1x1/ph.svg": {
     "file": "assets/ph.2b0e3037.svg",
@@ -75,13 +75,13 @@
     "file": "assets/qa.c8202a4d.svg",
     "src": "resources/images/1x1/qa.svg"
   },
-  "resources/images/1x1/th.svg": {
-    "file": "assets/th.bd853add.svg",
-    "src": "resources/images/1x1/th.svg"
-  },
   "resources/images/1x1/sv.svg": {
     "file": "assets/sv.bfd551e0.svg",
     "src": "resources/images/1x1/sv.svg"
+  },
+  "resources/images/1x1/th.svg": {
+    "file": "assets/th.bd853add.svg",
+    "src": "resources/images/1x1/th.svg"
   },
   "resources/images/1x1/tr.svg": {
     "file": "assets/tr.e0f4a60c.svg",
@@ -143,21 +143,17 @@
     "file": "assets/bg.f6741170.png",
     "src": "resources/images/bg.png"
   },
-  "resources/images/boy-1.png": {
-    "file": "assets/boy-1.f45f6d0d.png",
-    "src": "resources/images/boy-1.png"
-  },
   "resources/images/boy-2.png": {
     "file": "assets/boy-2.43ab3a7a.png",
     "src": "resources/images/boy-2.png"
   },
+  "resources/images/boy-1.png": {
+    "file": "assets/boy-1.f45f6d0d.png",
+    "src": "resources/images/boy-1.png"
+  },
   "resources/images/boy.png": {
     "file": "assets/boy.0150e855.png",
     "src": "resources/images/boy.png"
-  },
-  "resources/images/background-image.jpg": {
-    "file": "assets/background-image.3c3dc285.jpg",
-    "src": "resources/images/background-image.jpg"
   },
   "resources/images/ca.png": {
     "file": "assets/ca.abc56260.png",
@@ -187,13 +183,13 @@
     "file": "assets/cork-logo.6227cdb4.png",
     "src": "resources/images/cork-logo.png"
   },
-  "resources/images/de.png": {
-    "file": "assets/de.a8e964fc.png",
-    "src": "resources/images/de.png"
-  },
   "resources/images/delete-user-11.jpeg": {
     "file": "assets/delete-user-11.223cdc3a.jpeg",
     "src": "resources/images/delete-user-11.jpeg"
+  },
+  "resources/images/de.png": {
+    "file": "assets/de.a8e964fc.png",
+    "src": "resources/images/de.png"
   },
   "resources/images/delete-user-12.jpeg": {
     "file": "assets/delete-user-12.6d96eece.jpeg",
@@ -219,13 +215,13 @@
     "file": "assets/drag-1.abc14241.jpeg",
     "src": "resources/images/drag-1.jpeg"
   },
-  "resources/images/drag-4.jpg": {
-    "file": "assets/drag-4.88b506c4.jpg",
-    "src": "resources/images/drag-4.jpg"
-  },
   "resources/images/drag-2.jpeg": {
     "file": "assets/drag-2.e1fefe26.jpeg",
     "src": "resources/images/drag-2.jpeg"
+  },
+  "resources/images/drag-4.jpg": {
+    "file": "assets/drag-4.88b506c4.jpg",
+    "src": "resources/images/drag-4.jpg"
   },
   "resources/images/dragp-1.jpeg": {
     "file": "assets/dragp-1.34c5d2d7.jpeg",
@@ -294,6 +290,10 @@
   "resources/images/flag-fr.svg": {
     "file": "assets/flag-fr.ce0a0ad0.svg",
     "src": "resources/images/flag-fr.svg"
+  },
+  "resources/images/background-image.jpg": {
+    "file": "assets/background-image.3c3dc285.jpg",
+    "src": "resources/images/background-image.jpg"
   },
   "resources/images/flag-gbp.svg": {
     "file": "assets/flag-gbp.59f6d997.svg",
@@ -383,21 +383,21 @@
     "file": "assets/infobox-1.6289d2de.jpg",
     "src": "resources/images/infobox-1.jpg"
   },
-  "resources/images/jp.png": {
-    "file": "assets/jp.86f8caa2.png",
-    "src": "resources/images/jp.png"
-  },
   "resources/images/infobox-2.jpg": {
     "file": "assets/infobox-2.ed10f756.jpg",
     "src": "resources/images/infobox-2.jpg"
   },
-  "resources/images/lang-de.svg": {
-    "file": "assets/lang-de.ea0dd8b5.svg",
-    "src": "resources/images/lang-de.svg"
+  "resources/images/jp.png": {
+    "file": "assets/jp.86f8caa2.png",
+    "src": "resources/images/jp.png"
   },
   "resources/images/lang-ca.svg": {
     "file": "assets/lang-ca.04140f20.svg",
     "src": "resources/images/lang-ca.svg"
+  },
+  "resources/images/lang-de.svg": {
+    "file": "assets/lang-de.ea0dd8b5.svg",
+    "src": "resources/images/lang-de.svg"
   },
   "resources/images/lang-fr.svg": {
     "file": "assets/lang-fr.6a273def.svg",
@@ -411,13 +411,13 @@
     "file": "assets/lightbox-1.86b20f88.jpg",
     "src": "resources/images/lightbox-1.jpg"
   },
-  "resources/images/lightbox-3.jpeg": {
-    "file": "assets/lightbox-3.e4c54c74.jpeg",
-    "src": "resources/images/lightbox-3.jpeg"
-  },
   "resources/images/lightbox-2.jpeg": {
     "file": "assets/lightbox-2.ee011423.jpeg",
     "src": "resources/images/lightbox-2.jpeg"
+  },
+  "resources/images/lightbox-3.jpeg": {
+    "file": "assets/lightbox-3.e4c54c74.jpeg",
+    "src": "resources/images/lightbox-3.jpeg"
   },
   "resources/images/lightbox-4.jpeg": {
     "file": "assets/lightbox-4.64dca4b4.jpeg",
@@ -459,13 +459,13 @@
     "file": "assets/masonry-blog-style-4.c4a60e45.jpeg",
     "src": "resources/images/masonry-blog-style-4.jpeg"
   },
-  "resources/images/netflix.svg": {
-    "file": "assets/netflix.b85e74c8.svg",
-    "src": "resources/images/netflix.svg"
-  },
   "resources/images/mindset.svg": {
     "file": "assets/mindset.230d2eaf.svg",
     "src": "resources/images/mindset.svg"
+  },
+  "resources/images/netflix.svg": {
+    "file": "assets/netflix.b85e74c8.svg",
+    "src": "resources/images/netflix.svg"
   },
   "resources/images/p6.jpeg": {
     "file": "assets/p6.9fcddf8e.jpeg",
@@ -543,21 +543,21 @@
     "file": "assets/product-6.10b82bfd.jpg",
     "src": "resources/images/product-6.jpg"
   },
-  "resources/images/product-8.jpg": {
-    "file": "assets/product-8.e87bf666.jpg",
-    "src": "resources/images/product-8.jpg"
-  },
   "resources/images/product-7.jpg": {
     "file": "assets/product-7.64f3691f.jpg",
     "src": "resources/images/product-7.jpg"
   },
-  "resources/images/product-camera.jpg": {
-    "file": "assets/product-camera.1b9ec1c8.jpg",
-    "src": "resources/images/product-camera.jpg"
+  "resources/images/product-8.jpg": {
+    "file": "assets/product-8.e87bf666.jpg",
+    "src": "resources/images/product-8.jpg"
   },
   "resources/images/product-9.jpg": {
     "file": "assets/product-9.126b258d.jpg",
     "src": "resources/images/product-9.jpg"
+  },
+  "resources/images/product-camera.jpg": {
+    "file": "assets/product-camera.1b9ec1c8.jpg",
+    "src": "resources/images/product-camera.jpg"
   },
   "resources/images/product-headphones.jpg": {
     "file": "assets/product-headphones.a8d87a6b.jpg",
@@ -703,6 +703,10 @@
     "file": "assets/profile-5.61b8f5d5.jpeg",
     "src": "resources/images/profile-5.jpeg"
   },
+  "resources/images/profile-7.jpeg": {
+    "file": "assets/profile-7.c8d4ab5b.jpeg",
+    "src": "resources/images/profile-7.jpeg"
+  },
   "resources/images/profile-6.jpeg": {
     "file": "assets/profile-6.6dc0ab60.jpeg",
     "src": "resources/images/profile-6.jpeg"
@@ -710,10 +714,6 @@
   "resources/images/profile-8.jpeg": {
     "file": "assets/profile-8.c38cb08d.jpeg",
     "src": "resources/images/profile-8.jpeg"
-  },
-  "resources/images/profile-7.jpeg": {
-    "file": "assets/profile-7.c8d4ab5b.jpeg",
-    "src": "resources/images/profile-7.jpeg"
   },
   "resources/images/profile-9.jpeg": {
     "file": "assets/profile-9.72157485.jpeg",
@@ -791,17 +791,17 @@
     "file": "assets/user-profile.73d4fbad.jpeg",
     "src": "resources/images/user-profile.jpeg"
   },
-  "resources/images/video-chat.jpg": {
-    "file": "assets/video-chat.00f727c3.jpg",
-    "src": "resources/images/video-chat.jpg"
+  "resources/images/twitter.svg": {
+    "file": "assets/twitter.6ecacec0.svg",
+    "src": "resources/images/twitter.svg"
   },
   "resources/images/video-chat-2.jpg": {
     "file": "assets/video-chat-2.1f142941.jpg",
     "src": "resources/images/video-chat-2.jpg"
   },
-  "resources/images/twitter.svg": {
-    "file": "assets/twitter.6ecacec0.svg",
-    "src": "resources/images/twitter.svg"
+  "resources/images/video-chat.jpg": {
+    "file": "assets/video-chat.00f727c3.jpg",
+    "src": "resources/images/video-chat.jpg"
   },
   "resources/js/app.js": {
     "file": "assets/app.e5198d1b.js",
@@ -833,179 +833,9 @@
     "src": "resources/scss/layouts/vertical-light-menu/light/loader.scss",
     "isEntry": true
   },
-  "resources/scss/light/assets/scrollspyNav.scss": {
-    "file": "assets/scrollspyNav.326657de.css",
-    "src": "resources/scss/light/assets/scrollspyNav.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/clipboard/custom-clipboard.scss": {
-    "file": "assets/custom-clipboard.eee34373.css",
-    "src": "resources/scss/light/plugins/clipboard/custom-clipboard.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/apex/custom-apexcharts.scss": {
-    "file": "assets/custom-apexcharts.155eec38.css",
-    "src": "resources/scss/light/plugins/apex/custom-apexcharts.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/tomSelect/custom-tomSelect.scss": {
-    "file": "assets/custom-tomSelect.bc9d9f70.css",
-    "src": "resources/scss/light/plugins/tomSelect/custom-tomSelect.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/table/datatable/custom_dt_miscellaneous.scss": {
-    "file": "assets/custom_dt_miscellaneous.bd219c3f.css",
-    "src": "resources/scss/light/plugins/table/datatable/custom_dt_miscellaneous.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/filepond/custom-filepond.scss": {
-    "file": "assets/custom-filepond.ba473b1c.css",
-    "src": "resources/scss/dark/plugins/filepond/custom-filepond.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss": {
-    "file": "assets/custom-jquery.bootstrap-touchspin.min.2180ebe3.css",
-    "src": "resources/scss/dark/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/apex/custom-apexcharts.scss": {
-    "file": "assets/custom-apexcharts.d43f6702.css",
-    "src": "resources/scss/dark/plugins/apex/custom-apexcharts.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/clipboard/custom-clipboard.scss": {
-    "file": "assets/custom-clipboard.7c5f721d.css",
-    "src": "resources/scss/dark/plugins/clipboard/custom-clipboard.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/assets/pages/error/error.scss": {
-    "file": "assets/error.c0725bd9.css",
-    "src": "resources/scss/light/assets/pages/error/error.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/assets/authentication/auth-boxed.scss": {
-    "file": "assets/auth-boxed.fc616aa1.css",
-    "src": "resources/scss/light/assets/authentication/auth-boxed.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/flatpickr/custom-flatpickr.scss": {
-    "file": "assets/custom-flatpickr.70a61e98.css",
-    "src": "resources/scss/dark/plugins/flatpickr/custom-flatpickr.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/editors/quill/quill.snow.scss": {
-    "file": "assets/quill.snow.3d9db186.css",
-    "src": "resources/scss/light/plugins/editors/quill/quill.snow.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/autocomplete/css/custom-autoComplete.scss": {
-    "file": "assets/custom-autoComplete.80798b95.css",
-    "src": "resources/scss/dark/plugins/autocomplete/css/custom-autoComplete.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/pricing-table/css/component.scss": {
-    "file": "assets/component.517e4fb9.css",
-    "src": "resources/scss/light/plugins/pricing-table/css/component.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/assets/authentication/auth-boxed.scss": {
-    "file": "assets/auth-boxed.8681090a.css",
-    "src": "resources/scss/dark/assets/authentication/auth-boxed.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/fullcalendar/custom-fullcalendar.scss": {
-    "file": "assets/custom-fullcalendar.0cfb004b.css",
-    "src": "resources/scss/light/plugins/fullcalendar/custom-fullcalendar.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/filepond/custom-filepond.scss": {
-    "file": "assets/custom-filepond.9e9ad299.css",
-    "src": "resources/scss/light/plugins/filepond/custom-filepond.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/noUiSlider/custom-nouiSlider.scss": {
-    "file": "assets/custom-nouiSlider.593bfd2f.css",
-    "src": "resources/scss/light/plugins/noUiSlider/custom-nouiSlider.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/flatpickr/custom-flatpickr.scss": {
-    "file": "assets/custom-flatpickr.07d6db01.css",
-    "src": "resources/scss/light/plugins/flatpickr/custom-flatpickr.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/notification/snackbar/custom-snackbar.scss": {
-    "file": "assets/custom-snackbar.e0bcff6f.css",
-    "src": "resources/scss/light/plugins/notification/snackbar/custom-snackbar.scss",
-    "isEntry": true
-  },
-  "resources/scss/layouts/vertical-light-menu/dark/structure.scss": {
-    "file": "assets/structure.41100b1d.css",
-    "src": "resources/scss/layouts/vertical-light-menu/dark/structure.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/autocomplete/css/custom-autoComplete.scss": {
-    "file": "assets/custom-autoComplete.30a69936.css",
-    "src": "resources/scss/light/plugins/autocomplete/css/custom-autoComplete.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/bootstrap-range-Slider/bootstrap-slider.scss": {
-    "file": "assets/bootstrap-slider.7d296e0a.css",
-    "src": "resources/scss/light/plugins/bootstrap-range-Slider/bootstrap-slider.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss": {
-    "file": "assets/custom-jquery.bootstrap-touchspin.min.8e998a6a.css",
-    "src": "resources/scss/light/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/tagify/custom-tagify.scss": {
-    "file": "assets/custom-tagify.69b157e8.css",
-    "src": "resources/scss/light/plugins/tagify/custom-tagify.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/drag-and-drop/dragula/example.scss": {
-    "file": "assets/example.33ed28a2.css",
-    "src": "resources/scss/light/plugins/drag-and-drop/dragula/example.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/loaders/custom-loader.scss": {
-    "file": "assets/custom-loader.c9b611a0.css",
-    "src": "resources/scss/light/plugins/loaders/custom-loader.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/drag-and-drop/dragula/example.scss": {
-    "file": "assets/example.2acb32cd.css",
-    "src": "resources/scss/dark/plugins/drag-and-drop/dragula/example.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/bootstrap-range-Slider/bootstrap-slider.scss": {
-    "file": "assets/bootstrap-slider.e8b814bf.css",
-    "src": "resources/scss/dark/plugins/bootstrap-range-Slider/bootstrap-slider.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/loaders/custom-loader.scss": {
-    "file": "assets/custom-loader.91ae4ff7.css",
-    "src": "resources/scss/dark/plugins/loaders/custom-loader.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/noUiSlider/custom-nouiSlider.scss": {
-    "file": "assets/custom-nouiSlider.348fba05.css",
-    "src": "resources/scss/dark/plugins/noUiSlider/custom-nouiSlider.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/stepper/custom-bsStepper.scss": {
-    "file": "assets/custom-bsStepper.c487407c.css",
-    "src": "resources/scss/dark/plugins/stepper/custom-bsStepper.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/notification/snackbar/custom-snackbar.scss": {
-    "file": "assets/custom-snackbar.8bff6374.css",
-    "src": "resources/scss/dark/plugins/notification/snackbar/custom-snackbar.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/table/datatable/dt-global_style.scss": {
-    "file": "assets/dt-global_style.485b97f9.css",
-    "src": "resources/scss/dark/plugins/table/datatable/dt-global_style.scss",
+  "resources/scss/light/plugins/table/datatable/custom_dt_custom.scss": {
+    "file": "assets/custom_dt_custom.6503c76e.css",
+    "src": "resources/scss/light/plugins/table/datatable/custom_dt_custom.scss",
     "isEntry": true
   },
   "resources/scss/dark/plugins/fullcalendar/custom-fullcalendar.scss": {
@@ -1013,24 +843,14 @@
     "src": "resources/scss/dark/plugins/fullcalendar/custom-fullcalendar.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/sweetalerts2/custom-sweetalert.scss": {
-    "file": "assets/custom-sweetalert.fba5cd51.css",
-    "src": "resources/scss/dark/plugins/sweetalerts2/custom-sweetalert.scss",
+  "resources/scss/dark/plugins/tagify/custom-tagify.scss": {
+    "file": "assets/custom-tagify.0418c586.css",
+    "src": "resources/scss/dark/plugins/tagify/custom-tagify.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/table/datatable/custom_dt_custom.scss": {
-    "file": "assets/custom_dt_custom.d29e6f13.css",
-    "src": "resources/scss/dark/plugins/table/datatable/custom_dt_custom.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/table/datatable/custom_dt_miscellaneous.scss": {
-    "file": "assets/custom_dt_miscellaneous.34cf00e2.css",
-    "src": "resources/scss/dark/plugins/table/datatable/custom_dt_miscellaneous.scss",
-    "isEntry": true
-  },
-  "resources/scss/dark/plugins/pricing-table/css/component.scss": {
-    "file": "assets/component.d282be6a.css",
-    "src": "resources/scss/dark/plugins/pricing-table/css/component.scss",
+  "resources/scss/light/plugins/drag-and-drop/dragula/example.scss": {
+    "file": "assets/example.33ed28a2.css",
+    "src": "resources/scss/light/plugins/drag-and-drop/dragula/example.scss",
     "isEntry": true
   },
   "resources/scss/light/plugins/stepper/custom-bsStepper.scss": {
@@ -1038,9 +858,34 @@
     "src": "resources/scss/light/plugins/stepper/custom-bsStepper.scss",
     "isEntry": true
   },
-  "resources/scss/light/plugins/table/datatable/custom_dt_custom.scss": {
-    "file": "assets/custom_dt_custom.6503c76e.css",
-    "src": "resources/scss/light/plugins/table/datatable/custom_dt_custom.scss",
+  "resources/scss/dark/plugins/tomSelect/custom-tomSelect.scss": {
+    "file": "assets/custom-tomSelect.2a88337c.css",
+    "src": "resources/scss/dark/plugins/tomSelect/custom-tomSelect.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/assets/authentication/auth-boxed.scss": {
+    "file": "assets/auth-boxed.fc616aa1.css",
+    "src": "resources/scss/light/assets/authentication/auth-boxed.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/table/datatable/custom_dt_custom.scss": {
+    "file": "assets/custom_dt_custom.d29e6f13.css",
+    "src": "resources/scss/dark/plugins/table/datatable/custom_dt_custom.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/assets/authentication/auth-boxed.scss": {
+    "file": "assets/auth-boxed.8681090a.css",
+    "src": "resources/scss/dark/assets/authentication/auth-boxed.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/assets/pages/error/error.scss": {
+    "file": "assets/error.c0725bd9.css",
+    "src": "resources/scss/light/assets/pages/error/error.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/table/datatable/custom_dt_miscellaneous.scss": {
+    "file": "assets/custom_dt_miscellaneous.34cf00e2.css",
+    "src": "resources/scss/dark/plugins/table/datatable/custom_dt_miscellaneous.scss",
     "isEntry": true
   },
   "resources/scss/dark/assets/pages/error/error.scss": {
@@ -1048,24 +893,34 @@
     "src": "resources/scss/dark/assets/pages/error/error.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/tomSelect/custom-tomSelect.scss": {
-    "file": "assets/custom-tomSelect.2a88337c.css",
-    "src": "resources/scss/dark/plugins/tomSelect/custom-tomSelect.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/perfect-scrollbar/perfect-scrollbar.scss": {
-    "file": "assets/perfect-scrollbar.682153c9.css",
-    "src": "resources/scss/light/plugins/perfect-scrollbar/perfect-scrollbar.scss",
-    "isEntry": true
-  },
-  "resources/scss/light/plugins/splide/custom-splide.min.scss": {
-    "file": "assets/custom-splide.min.979f5591.css",
-    "src": "resources/scss/light/plugins/splide/custom-splide.min.scss",
-    "isEntry": true
-  },
   "resources/scss/light/plugins/editors/markdown/simplemde.min.scss": {
     "file": "assets/simplemde.min.341cd26c.css",
     "src": "resources/scss/light/plugins/editors/markdown/simplemde.min.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/filepond/custom-filepond.scss": {
+    "file": "assets/custom-filepond.9e9ad299.css",
+    "src": "resources/scss/light/plugins/filepond/custom-filepond.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss": {
+    "file": "assets/custom-jquery.bootstrap-touchspin.min.8e998a6a.css",
+    "src": "resources/scss/light/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/flatpickr/custom-flatpickr.scss": {
+    "file": "assets/custom-flatpickr.07d6db01.css",
+    "src": "resources/scss/light/plugins/flatpickr/custom-flatpickr.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/fullcalendar/custom-fullcalendar.scss": {
+    "file": "assets/custom-fullcalendar.0cfb004b.css",
+    "src": "resources/scss/light/plugins/fullcalendar/custom-fullcalendar.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/apex/custom-apexcharts.scss": {
+    "file": "assets/custom-apexcharts.d43f6702.css",
+    "src": "resources/scss/dark/plugins/apex/custom-apexcharts.scss",
     "isEntry": true
   },
   "resources/scss/dark/plugins/editors/quill/quill.snow.scss": {
@@ -1073,14 +928,14 @@
     "src": "resources/scss/dark/plugins/editors/quill/quill.snow.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/splide/custom-splide.min.scss": {
-    "file": "assets/custom-splide.min.ff84458b.css",
-    "src": "resources/scss/dark/plugins/splide/custom-splide.min.scss",
+  "resources/scss/dark/plugins/bootstrap-range-Slider/bootstrap-slider.scss": {
+    "file": "assets/bootstrap-slider.e8b814bf.css",
+    "src": "resources/scss/dark/plugins/bootstrap-range-Slider/bootstrap-slider.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/perfect-scrollbar/perfect-scrollbar.scss": {
-    "file": "assets/perfect-scrollbar.e418e04b.css",
-    "src": "resources/scss/dark/plugins/perfect-scrollbar/perfect-scrollbar.scss",
+  "resources/scss/light/plugins/notification/snackbar/custom-snackbar.scss": {
+    "file": "assets/custom-snackbar.e0bcff6f.css",
+    "src": "resources/scss/light/plugins/notification/snackbar/custom-snackbar.scss",
     "isEntry": true
   },
   "resources/scss/dark/assets/scrollspyNav.scss": {
@@ -1088,19 +943,29 @@
     "src": "resources/scss/dark/assets/scrollspyNav.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/tagify/custom-tagify.scss": {
-    "file": "assets/custom-tagify.0418c586.css",
-    "src": "resources/scss/dark/plugins/tagify/custom-tagify.scss",
+  "resources/scss/light/plugins/clipboard/custom-clipboard.scss": {
+    "file": "assets/custom-clipboard.eee34373.css",
+    "src": "resources/scss/light/plugins/clipboard/custom-clipboard.scss",
     "isEntry": true
   },
-  "resources/scss/layouts/vertical-light-menu/light/structure.scss": {
-    "file": "assets/structure.cdea2bf8.css",
-    "src": "resources/scss/layouts/vertical-light-menu/light/structure.scss",
+  "resources/scss/light/plugins/table/datatable/custom_dt_miscellaneous.scss": {
+    "file": "assets/custom_dt_miscellaneous.bd219c3f.css",
+    "src": "resources/scss/light/plugins/table/datatable/custom_dt_miscellaneous.scss",
     "isEntry": true
   },
-  "resources/scss/dark/assets/main.scss": {
-    "file": "assets/main.927561af.css",
-    "src": "resources/scss/dark/assets/main.scss",
+  "resources/scss/dark/plugins/editors/markdown/simplemde.min.scss": {
+    "file": "assets/simplemde.min.6910ff3d.css",
+    "src": "resources/scss/dark/plugins/editors/markdown/simplemde.min.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/tomSelect/custom-tomSelect.scss": {
+    "file": "assets/custom-tomSelect.bc9d9f70.css",
+    "src": "resources/scss/light/plugins/tomSelect/custom-tomSelect.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/apex/custom-apexcharts.scss": {
+    "file": "assets/custom-apexcharts.155eec38.css",
+    "src": "resources/scss/light/plugins/apex/custom-apexcharts.scss",
     "isEntry": true
   },
   "resources/scss/light/assets/main.scss": {
@@ -1108,9 +973,54 @@
     "src": "resources/scss/light/assets/main.scss",
     "isEntry": true
   },
-  "resources/scss/light/plugins/table/datatable/dt-global_style.scss": {
-    "file": "assets/dt-global_style.61725b7b.css",
-    "src": "resources/scss/light/plugins/table/datatable/dt-global_style.scss",
+  "resources/scss/dark/plugins/filepond/custom-filepond.scss": {
+    "file": "assets/custom-filepond.ba473b1c.css",
+    "src": "resources/scss/dark/plugins/filepond/custom-filepond.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/autocomplete/css/custom-autoComplete.scss": {
+    "file": "assets/custom-autoComplete.80798b95.css",
+    "src": "resources/scss/dark/plugins/autocomplete/css/custom-autoComplete.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/tagify/custom-tagify.scss": {
+    "file": "assets/custom-tagify.69b157e8.css",
+    "src": "resources/scss/light/plugins/tagify/custom-tagify.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/table/datatable/dt-global_style.scss": {
+    "file": "assets/dt-global_style.485b97f9.css",
+    "src": "resources/scss/dark/plugins/table/datatable/dt-global_style.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/drag-and-drop/dragula/example.scss": {
+    "file": "assets/example.2acb32cd.css",
+    "src": "resources/scss/dark/plugins/drag-and-drop/dragula/example.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/assets/scrollspyNav.scss": {
+    "file": "assets/scrollspyNav.326657de.css",
+    "src": "resources/scss/light/assets/scrollspyNav.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/clipboard/custom-clipboard.scss": {
+    "file": "assets/custom-clipboard.7c5f721d.css",
+    "src": "resources/scss/dark/plugins/clipboard/custom-clipboard.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/splide/custom-splide.min.scss": {
+    "file": "assets/custom-splide.min.979f5591.css",
+    "src": "resources/scss/light/plugins/splide/custom-splide.min.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/noUiSlider/custom-nouiSlider.scss": {
+    "file": "assets/custom-nouiSlider.593bfd2f.css",
+    "src": "resources/scss/light/plugins/noUiSlider/custom-nouiSlider.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss": {
+    "file": "assets/custom-jquery.bootstrap-touchspin.min.2180ebe3.css",
+    "src": "resources/scss/dark/plugins/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.scss",
     "isEntry": true
   },
   "resources/scss/light/plugins/sweetalerts2/custom-sweetalert.scss": {
@@ -1118,9 +1028,104 @@
     "src": "resources/scss/light/plugins/sweetalerts2/custom-sweetalert.scss",
     "isEntry": true
   },
-  "resources/scss/dark/plugins/editors/markdown/simplemde.min.scss": {
-    "file": "assets/simplemde.min.6910ff3d.css",
-    "src": "resources/scss/dark/plugins/editors/markdown/simplemde.min.scss",
+  "resources/scss/light/plugins/pricing-table/css/component.scss": {
+    "file": "assets/component.517e4fb9.css",
+    "src": "resources/scss/light/plugins/pricing-table/css/component.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/table/datatable/dt-global_style.scss": {
+    "file": "assets/dt-global_style.61725b7b.css",
+    "src": "resources/scss/light/plugins/table/datatable/dt-global_style.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/perfect-scrollbar/perfect-scrollbar.scss": {
+    "file": "assets/perfect-scrollbar.682153c9.css",
+    "src": "resources/scss/light/plugins/perfect-scrollbar/perfect-scrollbar.scss",
+    "isEntry": true
+  },
+  "resources/scss/layouts/vertical-light-menu/light/structure.scss": {
+    "file": "assets/structure.cdea2bf8.css",
+    "src": "resources/scss/layouts/vertical-light-menu/light/structure.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/bootstrap-range-Slider/bootstrap-slider.scss": {
+    "file": "assets/bootstrap-slider.7d296e0a.css",
+    "src": "resources/scss/light/plugins/bootstrap-range-Slider/bootstrap-slider.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/autocomplete/css/custom-autoComplete.scss": {
+    "file": "assets/custom-autoComplete.30a69936.css",
+    "src": "resources/scss/light/plugins/autocomplete/css/custom-autoComplete.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/loaders/custom-loader.scss": {
+    "file": "assets/custom-loader.91ae4ff7.css",
+    "src": "resources/scss/dark/plugins/loaders/custom-loader.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/notification/snackbar/custom-snackbar.scss": {
+    "file": "assets/custom-snackbar.8bff6374.css",
+    "src": "resources/scss/dark/plugins/notification/snackbar/custom-snackbar.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/loaders/custom-loader.scss": {
+    "file": "assets/custom-loader.c9b611a0.css",
+    "src": "resources/scss/light/plugins/loaders/custom-loader.scss",
+    "isEntry": true
+  },
+  "resources/scss/layouts/vertical-light-menu/dark/structure.scss": {
+    "file": "assets/structure.41100b1d.css",
+    "src": "resources/scss/layouts/vertical-light-menu/dark/structure.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/perfect-scrollbar/perfect-scrollbar.scss": {
+    "file": "assets/perfect-scrollbar.e418e04b.css",
+    "src": "resources/scss/dark/plugins/perfect-scrollbar/perfect-scrollbar.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/flatpickr/custom-flatpickr.scss": {
+    "file": "assets/custom-flatpickr.70a61e98.css",
+    "src": "resources/scss/dark/plugins/flatpickr/custom-flatpickr.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/noUiSlider/custom-nouiSlider.scss": {
+    "file": "assets/custom-nouiSlider.348fba05.css",
+    "src": "resources/scss/dark/plugins/noUiSlider/custom-nouiSlider.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/sweetalerts2/custom-sweetalert.scss": {
+    "file": "assets/custom-sweetalert.fba5cd51.css",
+    "src": "resources/scss/dark/plugins/sweetalerts2/custom-sweetalert.scss",
+    "isEntry": true
+  },
+  "resources/scss/light/plugins/editors/quill/quill.snow.scss": {
+    "file": "assets/quill.snow.3d9db186.css",
+    "src": "resources/scss/light/plugins/editors/quill/quill.snow.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/stepper/custom-bsStepper.scss": {
+    "file": "assets/custom-bsStepper.c487407c.css",
+    "src": "resources/scss/dark/plugins/stepper/custom-bsStepper.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/splide/custom-splide.min.scss": {
+    "file": "assets/custom-splide.min.ff84458b.css",
+    "src": "resources/scss/dark/plugins/splide/custom-splide.min.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/plugins/pricing-table/css/component.scss": {
+    "file": "assets/component.d282be6a.css",
+    "src": "resources/scss/dark/plugins/pricing-table/css/component.scss",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app.67dcdfd2.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/dark/assets/main.scss": {
+    "file": "assets/main.927561af.css",
+    "src": "resources/scss/dark/assets/main.scss",
     "isEntry": true
   }
 }
