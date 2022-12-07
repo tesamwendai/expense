@@ -24,17 +24,8 @@ $isAltMenu=0;
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
-    @vite(['resources/sass/app.scss','resources/js/app.js'])
     @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
-
     @vite(['resources/layouts/vertical-light-menu/loader.js'])
-    <!-- @if (Request::is('modern-light-menu/*'))
-        @vite(['resources/layouts/vertical-light-menu/loader.js'])
-    @elseif ((Request::is('modern-dark-menu/*')))
-        @vite(['resources/layouts/vertical-dark-menu/loader.js'])
-    @elseif ((Request::is('collapsible-menu/*')))
-        @vite(['resources/layouts/collapsible-menu/loader.js'])
-    @endif -->
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 
@@ -64,6 +55,7 @@ $isAltMenu=0;
     ])
 
     @endif
+    @vite('resources/js/app.js')
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {{$headerFiles}}
@@ -169,13 +161,6 @@ $isAltMenu=0;
 
     @vite(['resources/layouts/vertical-light-menu/app.js'])
 
-    {{-- @if (Request::is('modern-light-menu/*'))
-    @vite(['resources/layouts/vertical-light-menu/app.js'])
-    @elseif ((Request::is('modern-dark-menu/*')))
-    @vite(['resources/layouts/vertical-dark-menu/app.js'])
-    @elseif ((Request::is('collapsible-menu/*')))
-    @vite(['resources/layouts/collapsible-menu/app.js'])
-    @endif --}}
     <!-- END GLOBAL MANDATORY STYLES -->
 
     @endif

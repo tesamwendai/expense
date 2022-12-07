@@ -2,6 +2,6 @@ import.meta.glob([
     '../images/**',
 ]);
 
-import './bootstrap';
+// import './bootstrap';
 
-import '../sass/app.scss'
+// import '../sass/app.scss'

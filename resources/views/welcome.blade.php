@@ -209,7 +209,7 @@
 			}
 		}
         </style>
-        @vite(['resources/js/app.js'])
+        {{-- @vite(['resources/js/app.js']) --}}
     </head>
     <body class="bg-404">
 		<section class="pd-5vw">
@@ -234,7 +234,7 @@
 			<br>
 			<div>
 				<a href="{{route('login')}}">Login</a> | 
-				<a href="{{route('logout')}}">Register</a>
+				<a href="{{route('register')}}">Register</a>
 			</div>
 		</section>
 
