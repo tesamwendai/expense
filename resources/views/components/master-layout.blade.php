@@ -22,7 +22,7 @@ $isAltMenu=0;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
-    <link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.png')}}" />
     @vite(['resources/sass/app.scss','resources/js/app.js'])
 
     {{-- @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
@@ -116,10 +116,12 @@ $isAltMenu=0;
         @endif
 
         <!--  BEGIN CONTENT AREA  -->
-        <div id="content" class="main-content {{(Request::routeIs('blank') ? 'ms-0 mt-0' : '')}}">
+        {{-- {{(Request::routeIs('blank') ? 'ms-0 mt-0' : '')}} --}}
+        <div id="content" class="main-content">
 
             <div class="layout-px-spacing">
                 <div class="middle-content {{($isBoxed ? 'container-xxl' : '')}} p-0">
+
                     {{ $slot }}
                 </div>
             </div>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Expense</title>
-		<link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.ico')}}" />
+		<link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.png')}}" />
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 

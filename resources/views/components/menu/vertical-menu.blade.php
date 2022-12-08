@@ -17,12 +17,12 @@
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
                             <a href="/dashboard/analytics">
-                                <img src="{{Vite::asset('resources/images/logo.svg')}}" class="navbar-logo logo-dark" alt="logo">
-                                <img src="{{Vite::asset('resources/images/logo2.svg')}}" class="navbar-logo logo-light" alt="logo">
+                                <img src="{{Vite::asset('resources/images/favicon.png')}}" class="navbar-logo logo-dark" alt="logo">
+                                <img src="{{Vite::asset('resources/images/favicon.png')}}" class="navbar-logo logo-light" alt="logo">
                             </a>
                         </div>
                         <div class="nav-item theme-text">
-                            <a href="/dashboard/analytics" class="nav-link"> CORK </a>
+                            <a href="/dashboard/analytics" class="nav-link"> Expense </a>
                         </div>
                     </div>
                     <div class="nav-item sidebar-toggle">
@@ -33,25 +33,19 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu {{ Request::is('*/dashboard/*') ? "active" : "" }}">
-                        <a href="#dashboard" data-bs-toggle="collapse" aria-expanded="{{ Request::is('*/dashboard/*') ? "true" : "false" }}" class="dropdown-toggle">
+                    <li class="menu {{ Request::routeIs('home')? "active" : "" }}">
+                        <a href="#home" data-bs-toggle="collapse" aria-expanded="{{ Request::routeIs('home') ? "true" : "false" }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                <span>Dashboard</span>
+                                <span>Home</span>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled {{ Request::is('*/dashboard/*') ? "show" : "" }}" id="dashboard" data-bs-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled {{Request::routeIs('home') ? "show" : "" }}" id="home" data-bs-parent="#accordionExample">
                             <li class="{{ Request::routeIs('home') ? 'active' : '' }}">
-                                <a href="/dashboard/analytics"> Home </a>
-                            </li>
-                            <li class="{{ Request::routeIs('analytics') ? 'active' : '' }}">
-                                <a href="/dashboard/analytics"> Analytics </a>
-                            </li>
-                            <li class="{{ Request::routeIs('sales') ? 'active' : '' }}">
-                                <a href="/dashboard/sales"> Sales </a>
+                                <a href="/home"> Home </a>
                             </li>
                         </ul>
                     </li>
