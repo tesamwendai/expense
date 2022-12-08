@@ -19,7 +19,10 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('login',[LoginController::class,'login'])->name('login');
 Route::post('register',[LoginController::class,'register'])->name('register');
+
 
 // make group middleware auth
 Route::group(['middleware' => ['auth','verified']], function () {

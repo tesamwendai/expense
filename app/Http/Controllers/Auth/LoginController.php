@@ -11,6 +11,7 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
+
         $request->validate([
             'email' => 'required|email',
             'password' => 'required'
@@ -53,7 +54,7 @@ class LoginController extends Controller
     }
     // make function logout
     public function logout() {
-        session()->flush();
+        // session()->flush();
         auth()->logout();
         return redirect('login');
     }
