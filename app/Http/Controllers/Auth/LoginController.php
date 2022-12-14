@@ -14,7 +14,7 @@ class LoginController extends Controller
 
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|min:6'
         ]);
         // Check remember_me
         if($request->remember_me){
@@ -27,10 +27,9 @@ class LoginController extends Controller
 
         if (auth()->attempt($credentials,$remember_me)) {
             return redirect()->intended('home')
-                ->withSuccess('Signed in');
+                ->withSuccess('You have Successfully loggedin!');
         }
-
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->withErrors('Login credentials are not valid!');
     }
     public function register(Request $request){
         // dd($request->all());

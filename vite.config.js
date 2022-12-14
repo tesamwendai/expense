@@ -36,6 +36,14 @@ export default defineConfig({
                 'resources/scss/light/assets/authentication/auth-boxed.scss',
                 'resources/scss/dark/assets/authentication/auth-boxed.scss',
 
+                // Custom Loader in button
+                'resources/scss/light/assets/custom-loader.scss',
+                'resources/scss/dark/assets/custom-loader.scss',
+
+                // Modal css 
+                'resources/scss/light/assets/components/modal.scss',
+                'resources/scss/dark/assets/components/modal.scss',
+
                                 /**
                  * =======================
                  *      Plugins Files
@@ -73,6 +81,7 @@ export default defineConfig({
                  'resources/scss/light/plugins/table/datatable/custom_dt_miscellaneous.scss',
                  'resources/scss/light/plugins/tagify/custom-tagify.scss',
                  'resources/scss/light/plugins/tomSelect/custom-tomSelect.scss',
+
  
                  /**
                   * Dark

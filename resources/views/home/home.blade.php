@@ -17,6 +17,9 @@
             <div class="layout-top-spacing">
                 <div class="statbox widget box box-shadow">
                     <div class="widget-header">
+                        @if(session('success'))
+                        <h1>{{session('success')}}</h1>
+                        @endif
                         <h1>Hello <strong style="color:purple">{{auth()->user()->name}}</strong>! Welcome to my website </h1>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Icon-Mac.svg" width="32px" alt="">
                     </div>

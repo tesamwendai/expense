@@ -208,8 +208,29 @@
 				font-size: 6vh;
 			}
 		}
+		         
+         
+		.btn-grad {
+            background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA  51%, #1D2B64  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            /* text-transform: uppercase; */
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            /* display: block;  */
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }  
         </style>
-        {{-- @vite(['resources/js/app.js']) --}}
+
     </head>
     <body class="bg-404">
 		<section class="pd-5vw">
@@ -233,8 +254,8 @@
 			</div>
 			<br>
 			<div>
-				<a href="{{route('login')}}">Login</a> | 
-				<a href="{{route('register')}}">Register</a>
+				<a class="btn-grad" href="{{route('login')}}">Login</a> | 
+				<a class="btn-grad" href="{{route('register')}}">Register</a>
 			</div>
 		</section>
 

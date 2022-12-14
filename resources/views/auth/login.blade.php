@@ -72,7 +72,7 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button class="btn btn-secondary w-100">LOGIN</button>
+                                                    <button onclick="addSpin()" class="btn btn-secondary w-100 btn-login">LOGIN</button>
                                                 </div>
                                             </div>
 
@@ -139,7 +139,16 @@
 
             <!--  BEGIN CUSTOM SCRIPTS FILE  -->
             <x-slot:footerFiles>
+                <script>
+                    function addSpin() {
+                        document.querySelector('.btn-login').innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+                        document.querySelector('.btn-login').disabled = true;
+                        document.querySelector('input[type=email]').readOnly = true;
+                        document.querySelector('input[type=password]').readOnly = true;
 
+
+                    }
+                </script>
                 </x-slot>
                 <!--  END CUSTOM SCRIPTS FILE  -->
 </x-master-layout>

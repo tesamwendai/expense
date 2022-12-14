@@ -23,6 +23,7 @@ $isAltMenu=0;
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>{{ isset($pageTitle)?$pageTitle:"New Page"}}</title>
     <link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/favicon.png')}}" />
+    <script src="{{asset('plugins/jquery/jquery-3.6.1.min.js')}}"></script>
     @vite(['resources/sass/app.scss','resources/js/app.js'])
 
     {{-- @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
@@ -56,7 +57,7 @@ $isAltMenu=0;
     ])
 
     @endif
-
+    <link rel="stylesheet" href="{{asset('plugins/main.css')}}">
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {{$headerFiles}}
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -159,7 +160,7 @@ $isAltMenu=0;
 
 
     @vite(['resources/layouts/vertical-light-menu/app.js'])
-
+    <script src="{{asset('plugins/main.js')}}"></script>
     <!-- END GLOBAL MANDATORY STYLES -->
 
     @endif

@@ -167,7 +167,7 @@
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="avatar-container">
                             <div class="avatar avatar-sm avatar-indicators avatar-online">
-                                <img alt="avatar" src="{{Vite::asset('resources/images/profile-30.png')}}" class="rounded-circle">
+                                <img alt="avatar" src="https://ui-avatars.com/api/?name={{auth()->user()->name}}" class="rounded-circle">
                             </div>
                         </div>
                     </a>
