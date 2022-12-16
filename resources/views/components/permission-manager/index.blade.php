@@ -1,6 +1,6 @@
 <x-master-layout>
     <x-slot:pageTitle>
-        View Roles
+        View Permissions
         </x-slot>
         <x-slot:headerFiles>
             <link rel="stylesheet" href="{{asset('plugins/table/datatable/datatables.css')}}">
@@ -28,10 +28,10 @@
                 <div class="statbox widget box box-shadow">
                     <div class="widget-header p-3">
                     <h1>Danh sách vai trò </h1>
-                        <button type="button" onclick="openModalAddRole()" class="btn btn-success mr-2 _effect--ripple waves-effect waves-light">
+                        <button type="button" onclick="openModalAddPermission()" class="btn btn-success mr-2 _effect--ripple waves-effect waves-light">
                             Thêm vai trò
                         </button>
-                        <button onclick="reloadTable()" class="btn btn-danger btn-reload" >Reload</button>
+                        <button onclick="reloadTable()" class="btn btn-danger btn-reload" >Làm mới</button>
                     </div>
                     <div class="widget-content widget-content-area pt-3 p-3">
                         <table id="user-table" class="table style-3 dt-table-hover table-bordered">
@@ -47,11 +47,11 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="role-modal" tabindex="-1" role="dialog" aria-labelledby="role-modalLabel" aria-hidden="true">
+            <div class="modal fade" id="permission-modal" tabindex="-1" role="dialog" aria-labelledby="role-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="role-modalLabel">Thêm vai trò</h5>
+                            <h5 class="modal-title" id="role-modalLabel">Thêm quyền</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                 <svg> ... </svg>
                             </button>
@@ -60,19 +60,18 @@
                             <form>
                                 <input type="hidden" name="id" readonly>
                                 <div class="form-group mb-4">
-                                    <label for="role_name">Role Name</label>
-                                    <input type="text" class="form-control" name="role_name" placeholder="Enter role name">
+                                    <label for="permission_name">Tên quyền</label>
+                                    <input type="text" class="form-control" name="permission_name" placeholder="Enter permission name">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn btn-light-dark close-modal" onclick="closeModal()"><i class="flaticon-cancel-12"></i>Đóng</button>
-                            <button type="button" class="btn btn-primary btn-save">Thêm vai trò</button>
+                            <button type="button" class="btn btn-primary btn-save">Thêm quyền</button>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <x-slot:footerFiles>
                 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> -->
@@ -100,7 +99,7 @@
                             "pageLength": 10,
                             processing: true,
                             serverSide: true,
-                            ajax: "{{ route('role-manager.get-role') }}",
+                            ajax: "{{ route('permission-manager.get-permission') }}",
                             columns: [{
                                     data: 'id',
                                     name: 'id'
@@ -136,13 +135,13 @@
                     }
                     function addRole(){
                         // make ajax add role
-                        addSpin('btn-save','role_name');
+                        addSpin('btn-save','permission_name');
                         $.ajax({
-                            url: "{{ route('role-manager.insert-role') }}",
+                            url: "{{ route('permission-manager.insert-permission') }}",
                             type: "POST",
                             data: {
                                 _token: "{{ csrf_token() }}",
-                                name: $('input[name="role_name"]').val(),
+                                name: $('input[name="permission_name"]').val(),
                             },
                             success: function(response) {
                                 console.log(response);
@@ -150,46 +149,46 @@
                                     // reload table
                                     reloadTable();
                                     // close modal
-                                    $('#role-modal').modal('hide');
+                                    $('#permission-modal').modal('hide');
                                     // reset form
-                                    $('input[name="role_name"]').val('');
-                                    removeSpin('btn-save','role_name');
+                                    $('input[name="permission_name"]').val('');
+                                    removeSpin('btn-save','permission_name');
                                 }else{
-                                    removeSpin('btn-save','role_name');
+                                    removeSpin('btn-save','permission_name');
                                 }
                             },
                             error: function(response) {
-                                $('#role-modal').modal('hide');
-                                $('input[name="role_name"]').val('');
-                                removeSpin('btn-save','role_name');
+                                $('#permission-modal').modal('hide');
+                                $('input[name="permission_name"]').val('');
+                                removeSpin('btn-save','permission_name');
                             }
                         });
                     }
-                    // make function open modal add role
+                    // make function open modal add permission
                     function openModalAddRole(){
                         // open modal
                         // set title
-                        $('#role-modal .modal-title').text('Thêm vai trò');
+                        $('#permission-modal .modal-title').text('Thêm vai trò');
                         // set button
                         $('.btn-save').text('Thêm');
                         // set action
                         $('.btn-save').attr('onclick','addRole()');
-                        $('#role-modal').modal('show');
+                        $('#permission-modal').modal('show');
 
                     }
-                    // make function open modal edit role
+                    // make function open modal edit permission
                     function openModalEditRole(id){
                         // open modal
                         addSpin('edit-'+id);
                         // set title
-                        $('#role-modal .modal-title').text('Sửa vai trò');
+                        $('#permission-modal .modal-title').text('Sửa vai trò');
                         // set button
                         $('.btn-save').text('Cập nhật');
                         // set action
                         $('.btn-save').attr('onclick','updateRole('+id+')');
-                        // make ajax get role
+                        // make ajax get permission
                         $.ajax({
-                            url: "{{ route('role-manager.get-role-by-id') }}",
+                            url: "{{ route('permission-manager.get-permission-by-id') }}",
                             type: "GET",
                             data: {
                                 _token: "{{ csrf_token() }}",
@@ -199,30 +198,30 @@
                                 console.log(response);
                                 if (response.status == "success") {
                                     // set value
-                                    $('input[name="role_name"]').val(response.data.name);
+                                    $('input[name="permission_name"]').val(response.data.name);
                                     $('input[name="id"]').val(response.data.id);
                                     removeSpin('edit-'+id);
-                                    $('#role-modal').modal('show');
+                                    $('#permission-modal').modal('show');
                                     
                                 }
                             },
                             error: function(response) {
-                                $('#role-modal').modal('hide');
-                                $('input[name="role_name"]').val('');
+                                $('#permission-modal').modal('hide');
+                                $('input[name="permission_name"]').val('');
                             }
                         });
                     }
                     // make function update role
                     function updateRole(id){
                         // make ajax update role
-                        addSpin('btn-save','role_name');
+                        addSpin('btn-save','permission_name');
                         $.ajax({
-                            url: "{{ route('role-manager.update-role') }}",
+                            url: "{{ route('permission-manager.update-permission') }}",
                             type: "POST",
                             data: {
                                 _token: "{{ csrf_token() }}",
                                 id: id,
-                                name: $('input[name="role_name"]').val(),
+                                name: $('input[name="permission_name"]').val(),
                             },
                             success: function(response) {
                                 console.log(response);
@@ -230,26 +229,26 @@
                                     // reload table
                                     reloadTable();
                                     // close modal
-                                    $('#role-modal').modal('hide');
+                                    $('#permission-modal').modal('hide');
                                     // reset form
-                                    $('input[name="role_name"]').val('');
-                                    removeSpin('btn-save','role_name');
+                                    $('input[name="permission_name"]').val('');
+                                    removeSpin('btn-save','permission_name');
                                 }else{
-                                    removeSpin('btn-update','role_name');
+                                    removeSpin('btn-update','permission_name');
                                 }
                             },
                             error: function(response) {
-                                $('#role-modal').modal('hide');
-                                $('input[name="role_name"]').val('');
-                                removeSpin('btn-save','role_name');
+                                $('#permission-modal').modal('hide');
+                                $('input[name="permission_name"]').val('');
+                                removeSpin('btn-save','permission_name');
                             }
                         });
                     }
                     function deleteRole(id){
-                        // make ajax delete role
+                        // make ajax delete permission
                         addSpin('delete-'+id);
                         $.ajax({
-                            url: "{{ route('role-manager.delete-role') }}",
+                            url: "{{ route('permission-manager.delete-permission') }}",
                             type: "POST",
                             data: {
                                 _token: "{{ csrf_token() }}",
@@ -271,8 +270,8 @@
                         });
                     }
                     function closeModal(){
-                        $('#role-modal').modal('hide');
-                        $('#role-modal form')[0].reset();
+                        $('#permission-modal').modal('hide');
+                        $('#permission-modal form')[0].reset();
                     }
                     // $('.btn-reload').loading();
                 </script>

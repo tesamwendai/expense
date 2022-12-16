@@ -37,8 +37,8 @@ export default defineConfig({
                 'resources/scss/dark/assets/authentication/auth-boxed.scss',
 
                 // Custom Loader in button
-                'resources/scss/light/assets/custom-loader.scss',
-                'resources/scss/dark/assets/custom-loader.scss',
+                // 'resources/scss/light/assets/custom-loader.scss',
+                // 'resources/scss/dark/assets/custom-loader.scss',
 
                 // Modal css 
                 'resources/scss/light/assets/components/modal.scss',

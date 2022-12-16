@@ -22,12 +22,17 @@ class RoleController extends Controller
                 return $role->created_at->format('d/m/Y');
             })
             ->addColumn('action', function ($role) {
-                return '<a href="#"  class="btn btn-xs btn-primary edit" id="' . $role->id . '"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                return '<a href="#"  onclick="openModalEditRole('.$role->id.')" class="btn btn-xs btn-primary edit-'.$role->id.'" id="' . $role->id . '"><i class="glyphicon glyphicon-edit"></i> Edit</a>
                             <a href="#" onclick="deleteRole('.$role->id.')" class="btn btn-xs btn-danger delete-'.$role->id.'" id="' . $role->id . '"><i class="glyphicon glyphicon-edit"></i> Delete</a>';
             })
             ->rawColumns(['status', 'action'])
-            
             ->make(true);
+    }
+    // make function getRoleById
+    public function getRoleById(Request $request)
+    {
+        $role = Role::find($request->id);
+        return response()->success($role,"Lấy dữ liệu role<".$request->id."> thành công! 😌");
     }
     // make functio insert role
     public function insertRole(Request $request)

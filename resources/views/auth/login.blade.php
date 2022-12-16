@@ -26,7 +26,7 @@
                                     background-size: contain;
                                     background-repeat: no-repeat;
                                     border-radius: 20px;
-                                    backdrop-filter: blur(2px);
+                                    backdrop-filter: blur(7px);
                                 ">
 
                                         <div class="row">
@@ -72,7 +72,7 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button onclick="addSpin()" class="btn btn-secondary w-100 btn-login">LOGIN</button>
+                                                    <button type="submit" onclick="spin()" class="btn btn-secondary w-100 btn-login">LOGIN</button>
                                                 </div>
                                             </div>
 
@@ -140,13 +140,12 @@
             <!--  BEGIN CUSTOM SCRIPTS FILE  -->
             <x-slot:footerFiles>
                 <script>
-                    function addSpin() {
+                    function spin() {
                         document.querySelector('.btn-login').innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
                         document.querySelector('.btn-login').disabled = true;
                         document.querySelector('input[type=email]').readOnly = true;
                         document.querySelector('input[type=password]').readOnly = true;
-
-
+                        $('form').submit();;
                     }
                 </script>
                 </x-slot>
