@@ -218,24 +218,25 @@
                     );
 
                     function changeLanguage(element, lang) {
-                        console.log(lang);
+
                         $.ajax({
                             url: '/change-language/' + (lang == "vi" ? "en" : "vi"),
-                            type: 'POST',
+                            type: 'GET',
                             data: {
                                 _token: '{{ csrf_token() }}',
                                 lang: lang
                             },
                             success: function(data) {
-                                // location.reload();
+                                if (lang == 'en') {
+                                    element.src = `{{Vite::asset('resources/images/1x1/vn.svg')}}`;
+                                } else {
+                                    element.src = `{{Vite::asset('resources/images/1x1/us.svg')}}`;
+                                }
+                                location.reload();
                             }
                         });
 
-                        if (lang == 'en') {
-                            element.src = `{{Vite::asset('resources/images/1x1/vn.svg')}}`;
-                        } else {
-                            element.src = `{{Vite::asset('resources/images/1x1/us.svg')}}`;
-                        }
+
                     }
                     // FilePond.parse(document.body);
                 </script>
