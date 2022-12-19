@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
@@ -25,7 +26,10 @@ Route::get('/', function () {
 Route::post('login', [LoginController::class, 'login'])->name('login');
 Route::post('register', [LoginController::class, 'register'])->name('register');
 
-Route::post('change-language/{language}', [LoginController::class, 'changeLanguage'])->name('change-language');
+Route::group(['middleware' => 'language'], function() {
+    Route::get('change-language/{lang}', [SettingController::class, 'changeLanguage'])->name('change-language');
+});
+
 
 // make group middleware auth
 Route::group(['middleware' => ['auth', 'verified']], function () {

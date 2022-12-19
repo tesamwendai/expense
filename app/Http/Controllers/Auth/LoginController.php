@@ -51,16 +51,6 @@ class LoginController extends Controller
             return redirect("home")->withSuccess('You have signed-in');
         }
     }
-    // make function change language
-    public function changeLanguage($language)
-    {
-        // $locale = \App::currentLocale();
-
-        // if($locale!= $language)
-            \App::setlocale($language);
-        return redirect()->back();
-
-    }
     // make function logout
     public function logout() {
         // session()->flush();

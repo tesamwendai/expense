@@ -54,9 +54,10 @@
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                    <h2 class="float-start">Sign Up</h2>
-                                                    <img onclick="changeLanguage(this,`{{app()->getLocale()}}`)" class="float-end" width="16px" src="{{Vite::asset('resources/images/1x1/'.app()->getLocale().'.svg')}}" class="flag-width" alt="flag">
-                                                {{-- <p>Enter your email and password to register</p> --}}
+                                                <h2 class="float-start">{{trans('auth.register')}} {{session('my_language')}} {{\App::currentLocale()}}</h2>
+                                                <img onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" class="flag-width" alt="flag">
+                                                <a href="{!! route('change-language', ['en']) !!}">English</a>
+                                                <a href="/change-language/vi">Vietnam</a>
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
                                                     <ul>
@@ -215,24 +216,25 @@
                     FilePond.create(
                         document.querySelector('.filepond')
                     );
-                    function changeLanguage(element,lang){
-                        
+
+                    function changeLanguage(element, lang) {
+                        console.log(lang);
                         $.ajax({
-                            url: '/change-language/'+(lang=="vi"?"en":"vi"),
+                            url: '/change-language/' + (lang == "vi" ? "en" : "vi"),
                             type: 'POST',
                             data: {
                                 _token: '{{ csrf_token() }}',
                                 lang: lang
                             },
-                            success: function (data) {
-                                location.reload();
+                            success: function(data) {
+                                // location.reload();
                             }
                         });
 
-                        if(lang=='en'){
-                            element.src =`{{Vite::asset('resources/images/1x1/vn.svg')}}`;
-                        }else{
-                            element.src =`{{Vite::asset('resources/images/1x1/us.svg')}}`;
+                        if (lang == 'en') {
+                            element.src = `{{Vite::asset('resources/images/1x1/vn.svg')}}`;
+                        } else {
+                            element.src = `{{Vite::asset('resources/images/1x1/us.svg')}}`;
                         }
                     }
                     // FilePond.parse(document.body);
