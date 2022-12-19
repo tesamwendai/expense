@@ -34,7 +34,6 @@ $isAltMenu=0;
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/bootstrap/bootstrap.min.css')}}">
 
     @vite(['resources/scss/light/assets/main.scss', 'resources/scss/dark/assets/main.scss'])
-
     @if (
     !Request::routeIs('404') &&
     !Request::routeIs('maintenance') &&
@@ -163,6 +162,7 @@ $isAltMenu=0;
     <!-- END GLOBAL MANDATORY STYLES -->
 
     @endif
+
     {{$footerFiles}}
 </body>
 

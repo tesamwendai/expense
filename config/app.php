@@ -188,6 +188,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */
