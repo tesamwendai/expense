@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::post('login', [LoginController::class, 'login'])->name('login');
 Route::post('register', [LoginController::class, 'register'])->name('register');
 
+Route::post('change-language/{language}', [LoginController::class, 'changeLanguage'])->name('change-language');
 
 // make group middleware auth
 Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -56,6 +57,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         Route::post('update-permission', [PermissionController::class, 'updatePermission'])->name('permission-manager.update-permission');
         Route::post('delete-permission', [PermissionController::class, 'deletePermission'])->name('permission-manager.delete-permission');
     });
+    // Make route Change Language
     // Route::get('list-user',[UserController::class,'index'])->name('list-user');
     // Route::get('get-user',[UserController::class,'getUser'])->name('get-user');
     // Logout
