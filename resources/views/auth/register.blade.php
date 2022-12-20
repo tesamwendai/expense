@@ -55,7 +55,7 @@
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
                                                 <h2 class="float-start">{{trans('auth.register')}}</h2>
-                                                <img data-bs-toggle="tooltip" data-bs-placement="top" title="Change language" onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" class="flag-width" alt="flag">
+                                                <img style="cursor:pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Change language" onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end flag-width" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" alt="flag">
                                                 {{-- <a href="{!! route('change-language', ['en']) !!}">English</a> --}}
                                                 {{-- <a href="/change-language/vi">Vietnam</a> --}}
                                                 @if ($errors->any())
@@ -205,7 +205,7 @@
                     FilePond.setOptions({
                         server: {
                             // url:'{{route("upload-avatar")}}',
-                            url:'{{ URL::to('')}}',
+                            url:'{{ URL::to("")}}',
                             process:{
                                 url:'/upload-avatar',
                                 method:'POST',
@@ -219,20 +219,20 @@
                                 'X-CSRF-TOKEN':'{{csrf_token()}}'
                             }
                         },
-                        labelIdle: '{!!trans('auth.file_pond.labelIdle')!!}',
-                        labelFileWaitingForSize: '{{trans('auth.file_pond.labelFileWaitingForSize')}}',
-                        labelFileSizeNotAvailable: '{{trans('auth.file_pond.labelFileSizeNotAvailable')}}',
-                        labelFileLoading: '{{trans('auth.file_pond.labelFileLoading')}}',
-                        labelTapToCancel: '{{trans('auth.file_pond.labelTapToCancel')}}',
-                        labelMaxFileSize: '{{trans('auth.file_pond.labelMaxFileSize')}}',
-                        labelMaxFileSizeExceeded: '{{trans('auth.file_pond.labelMaxFileSizeExceeded')}}',
-                        labelFileProcessing: '{{trans('auth.file_pond.labelFileProcessing')}}',
-                        labelFileProcessingError: '{{trans('auth.file_pond.labelFileProcessingError')}}',
-                        labelTapToRetry: '{{trans('auth.file_pond.labelTapToRetry')}}',
+                        labelIdle: '{!!trans("auth.file_pond.labelIdle")!!}',
+                        labelFileWaitingForSize: '{{trans("auth.file_pond.labelFileWaitingForSize")}}',
+                        labelFileSizeNotAvailable: '{{trans("auth.file_pond.labelFileSizeNotAvailable")}}',
+                        labelFileLoading: '{{trans("auth.file_pond.labelFileLoading")}}',
+                        labelTapToCancel: '{{trans("auth.file_pond.labelTapToCancel")}}',
+                        labelMaxFileSize: '{{trans("auth.file_pond.labelMaxFileSize")}}',
+                        labelMaxFileSizeExceeded: '{{trans("auth.file_pond.labelMaxFileSizeExceeded")}}',
+                        labelFileProcessing: '{{trans("auth.file_pond.labelFileProcessing")}}',
+                        labelFileProcessingError: '{{trans("auth.file_pond.labelFileProcessingError")}}',
+                        labelTapToRetry: '{{trans("auth.file_pond.labelTapToRetry")}}',
 
-                        labelFileProcessingComplete: '{{trans('auth.file_pond.labelFileProcessingComplete')}}',
-                        labelFileProcessingAborted: '{{trans('auth.file_pond.labelFileProcessingAborted')}}',
-                        labelTapToCancel: '{{trans('auth.file_pond.labelTapToCancel')}}',
+                        labelFileProcessingComplete: '{{trans("auth.file_pond.labelFileProcessingComplete")}}',
+                        labelFileProcessingAborted: '{{trans("auth.file_pond.labelFileProcessingAborted")}}',
+                        labelTapToCancel: '{{trans("auth.file_pond.labelTapToCancel")}}',
 
                         
 

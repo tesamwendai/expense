@@ -29,6 +29,8 @@ class UploadController extends Controller
     {
         $files =   Storage::allFiles('public/images/avatars/');
         Storage::delete($files);
+        Storage::deleteDirectory('public/images/avatars');
+        Storage::deleteDirectory('public/images');
         TemporaryFile::query()->truncate();
         return response()->success('Xóa bộ nhớ tạm thành công!');
     }
