@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
@@ -29,6 +30,11 @@ Route::post('register', [LoginController::class, 'register'])->name('register');
 Route::group(['middleware' => 'language'], function() {
     Route::get('change-language/{lang}', [SettingController::class, 'changeLanguage'])->name('change-language');
 });
+
+// make route upload image
+Route::post('upload-avatar', [UploadController::class, 'processAvatar'])->name('upload-avatar');
+Route::delete('revert-avatar', [UploadController::class, 'revertAvatar'])->name('revert-avatar');
+
 
 
 // make group middleware auth
@@ -61,7 +67,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         Route::post('update-permission', [PermissionController::class, 'updatePermission'])->name('permission-manager.update-permission');
         Route::post('delete-permission', [PermissionController::class, 'deletePermission'])->name('permission-manager.delete-permission');
     });
-    // Make route Change Language
     // Route::get('list-user',[UserController::class,'index'])->name('list-user');
     // Route::get('get-user',[UserController::class,'getUser'])->name('get-user');
     // Logout

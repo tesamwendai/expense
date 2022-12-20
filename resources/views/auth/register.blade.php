@@ -34,7 +34,7 @@
             </x-slot>
             <!-- END GLOBAL MANDATORY STYLES -->
 
-            <div class="auth-container d-flex" style="border:'none';background: url({{Vite::asset('resources/images/background-image.jpg')}})">
+            <div class="auth-container d-flex" style="border:'none';background: url({{Vite::asset('resources/images/background-image-1.jpg')}});background-size: cover;background-repeat: no-repeat;">
 
                 <div class="container mx-auto align-self-center">
 
@@ -44,20 +44,20 @@
                             <div class="card mt-3 mb-3" style="
                             border-radius: 20px;border:none">
                                 <div class="card-body" style="
-                                background: linear-gradient(45deg, rgba(230, 211, 245, .8),rgba(207, 231, 207, .8));
+                                background: linear-gradient(120deg, rgba(230, 211, 245, .8),rgba(207, 231, 207, .8));
                                 background-size: contain;
                                 background-repeat: no-repeat;
                                 border-radius: 20px;
-                                backdrop-filter: blur(2px);
+                                backdrop-filter: blur(3px);
                             ">
                                     <form action="{{ route('register') }}" method="post">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <h2 class="float-start">{{trans('auth.register')}} {{session('my_language')}} {{\App::currentLocale()}}</h2>
-                                                <img onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" class="flag-width" alt="flag">
-                                                <a href="{!! route('change-language', ['en']) !!}">English</a>
-                                                <a href="/change-language/vi">Vietnam</a>
+                                                <h2 class="float-start">{{trans('auth.register')}}</h2>
+                                                <img data-bs-toggle="tooltip" data-bs-placement="top" title="Change language" onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" class="flag-width" alt="flag">
+                                                {{-- <a href="{!! route('change-language', ['en']) !!}">English</a> --}}
+                                                {{-- <a href="/change-language/vi">Vietnam</a> --}}
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
                                                     <ul>
@@ -70,32 +70,33 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Name</label>
-                                                    <input type="text" name="name" class="form-control add-billing-address-input">
+                                                    <input type="text" id="folder">
+                                                    <label class="form-label">{{trans('auth.name')}}</label>
+                                                    <input type="text" name="name" class="form-control ">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Email</label>
+                                                    <label class="form-label">{{trans('auth.email')}}</label>
                                                     <input type="email" name="email" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Password</label>
+                                                    <label class="form-label">{{trans('auth.password')}}</label>
                                                     <input type="text" name="password" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Confirm password</label>
+                                                    <label class="form-label">{{trans('auth.confirm_password')}}</label>
                                                     <input type="text" name="password_confirmation" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Ảnh đại diện</label>
-                                                    <input type="file" class="filepond" name="filepond" accept="image/*" data-allow-reorder="true" data-max-file-size="3MB">
+                                                    <label class="form-label">{{trans('auth.avatar')}}</label>
+                                                    <input type="file" class="filepond" name="avatar" accept="image/*" data-allow-reorder="true" data-max-file-size="3MB">
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -103,7 +104,7 @@
                                                     <div class="form-check form-check-primary form-check-inline">
                                                         <input class="form-check-input me-3" type="checkbox" id="form-check-default">
                                                         <label class="form-check-label" for="form-check-default">
-                                                            I agree the <a href="javascript:void(0);" class="text-primary">Terms and Conditions</a>
+                                                            {!! trans('auth.terms')!!}
                                                         </label>
                                                     </div>
                                                 </div>
@@ -111,8 +112,7 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button type="submit" class="btn btn-secondary w-100">SIGN
-                                                        UP</button>
+                                                    <button type="submit" class="btn btn-secondary w-100">{{trans('auth.btn-signup')}}</button>
                                                 </div>
                                             </div>
 
@@ -120,10 +120,11 @@
                                                 <div class="">
                                                     <div class="seperator">
                                                         <hr>
-                                                        <div class="seperator-text"> <span>Or continue with</span></div>
+                                                        <div class="seperator-text"> <span>{{trans('auth.or_continue_with')}}</span></div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            
 
                                             <div class="col-sm-4 col-12">
                                                 <div class="mb-4">
@@ -154,7 +155,7 @@
 
                                             <div class="col-12">
                                                 <div class="text-center">
-                                                    <p class="mb-0">Already have an account ? <a href="{{ route('login') }}" class="text-warning">Sign in</a>
+                                                    <p class="mb-0">{{trans('auth.already_have_account')}} <a href="{{ route('login') }}" class="text-success">{{trans('auth.btn-login')}}</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -202,14 +203,39 @@
                         FilePondPluginFileValidateType
                     );
                     FilePond.setOptions({
-                        server: '/upload',
-                        labelIdle: `Kéo và thả ảnh của bạn <span class="filepond--label-action">Tải lên</span>`,
-                        labelFileWaitingForSize: 'Đang đợi kích thước',
-                        labelFileSizeNotAvailable: 'Kích thước không khả dụng',
-                        labelFileLoading: 'Đang tải...',
-                        labelTapToCancel: 'Nhấn để hủy',
-                        labelMaxFileSize: 'Kích thước không vượt quá: {filesize}',
-                        labelMaxFileSizeExceeded: 'Tệp tin quá lớn',
+                        server: {
+                            // url:'{{route("upload-avatar")}}',
+                            url:'{{ URL::to('')}}',
+                            process:{
+                                url:'/upload-avatar',
+                                method:'POST',
+                                onload:(response)=>{
+
+                                    // console.log(JSON.parse(JSON.parse(response).data).temp_path);
+                                },
+                            },
+                            revert:'/revert-avatar',
+                            headers:{
+                                'X-CSRF-TOKEN':'{{csrf_token()}}'
+                            }
+                        },
+                        labelIdle: '{!!trans('auth.file_pond.labelIdle')!!}',
+                        labelFileWaitingForSize: '{{trans('auth.file_pond.labelFileWaitingForSize')}}',
+                        labelFileSizeNotAvailable: '{{trans('auth.file_pond.labelFileSizeNotAvailable')}}',
+                        labelFileLoading: '{{trans('auth.file_pond.labelFileLoading')}}',
+                        labelTapToCancel: '{{trans('auth.file_pond.labelTapToCancel')}}',
+                        labelMaxFileSize: '{{trans('auth.file_pond.labelMaxFileSize')}}',
+                        labelMaxFileSizeExceeded: '{{trans('auth.file_pond.labelMaxFileSizeExceeded')}}',
+                        labelFileProcessing: '{{trans('auth.file_pond.labelFileProcessing')}}',
+                        labelFileProcessingError: '{{trans('auth.file_pond.labelFileProcessingError')}}',
+                        labelTapToRetry: '{{trans('auth.file_pond.labelTapToRetry')}}',
+
+                        labelFileProcessingComplete: '{{trans('auth.file_pond.labelFileProcessingComplete')}}',
+                        labelFileProcessingAborted: '{{trans('auth.file_pond.labelFileProcessingAborted')}}',
+                        labelTapToCancel: '{{trans('auth.file_pond.labelTapToCancel')}}',
+
+                        
+
                     });
                     // Select the file input and use 
                     // create() to turn it into a pond

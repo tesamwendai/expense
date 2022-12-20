@@ -11,7 +11,8 @@
             <!--  END CUSTOM STYLE FILE  -->
             </x-slot>
             <!-- END GLOBAL MANDATORY STYLES -->
-            <div class="auth-container d-flex" style="border:'none';background: url({{Vite::asset('resources/images/background-image.jpg')}})">
+            <div class="auth-container d-flex"
+                style="border:'none';background: url({{ Vite::asset('resources/images/background-image-1.jpg');}});background-repeat:no-repeat;background-size:cover">
 
                 <div class="container mx-auto align-self-center">
                     <form action="{{ 'login' }}" method="post">
@@ -19,21 +20,29 @@
                         <div class="row">
                             <div
                                 class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto">
-                                <div class="card mt-3 mb-3" style="
+                                <div class="card mt-3 mb-3"
+                                    style="
                                 border-radius: 20px;border:none">
-                                    <div class="card-body" style="
-                                    background: linear-gradient(45deg, rgba(230, 211, 245, .8),rgba(207, 231, 207, .8));
+                                    <div class="card-body"
+                                        style="
+                                    background: linear-gradient(120deg, rgba(230, 211, 245, .8),rgba(207, 231, 207, .8));
                                     background-size: contain;
                                     background-repeat: no-repeat;
                                     border-radius: 20px;
-                                    backdrop-filter: blur(7px);
+                                    backdrop-filter: blur(3px);
                                 ">
 
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
 
-                                                <h2>LogIn</h2>
-                                                <p>Enter your email and password to login</p>
+                                                <h2 class="float-start">{{ trans('auth.login') }}</h2>
+                                                <img data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Change language"
+                                                    onclick="changeLanguage(this,`{{ \App::currentLocale() }}`)"
+                                                    class="float-end" width="16px"
+                                                    src="{{ Vite::asset('resources/images/1x1/' . \App::currentLocale() . '.svg') }}"
+                                                    class="flag-width" alt="flag">
+
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger">
                                                         <ul>
@@ -46,15 +55,16 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
-                                                    <label class="form-label">Email</label>
+                                                    <label class="form-label">{{ trans('auth.email') }}</label>
                                                     <input type="email" name="email" value="quocthai0099@gmail.com"
                                                         class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <label class="form-label">Password</label>
-                                                    <input type="password" name="password" value="quocthai123" class="form-control">
+                                                    <label class="form-label">{{ trans('auth.password') }}</label>
+                                                    <input type="password" name="password" value="quocthai123"
+                                                        class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -64,7 +74,7 @@
                                                             id="form-check-default">
                                                         <label class="form-check-label" name="remember_me"
                                                             for="form-check-default">
-                                                            Remember me
+                                                            {{ trans('auth.remember_me') }}
                                                         </label>
                                                     </div>
                                                 </div>
@@ -72,7 +82,8 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button type="submit" onclick="spin()" class="btn btn-secondary w-100 btn-login">LOGIN</button>
+                                                    <button type="submit" onclick="spin()"
+                                                        class="btn btn-secondary w-100 btn-login">{{ trans('auth.login') }}</button>
                                                 </div>
                                             </div>
 
@@ -80,7 +91,8 @@
                                                 <div class="">
                                                     <div class="seperator">
                                                         <hr>
-                                                        <div class="seperator-text"> <span>Or continue with</span></div>
+                                                        <div class="seperator-text">
+                                                            <span>{{ trans('auth.or_continue_with') }}</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -117,9 +129,9 @@
 
                                             <div class="col-12">
                                                 <div class="text-center">
-                                                    <p class="mb-0">Dont't have an account ? <a
-                                                            href="{{ route('register') }}" class="text-warning">Sign
-                                                            Up</a>
+                                                    <p class="mb-0">{{ trans('auth.dont_have_account') }} <a
+                                                            href="{{ route('register') }}" class="text-success">
+                                                            {{ trans('auth.register') }}</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -141,12 +153,34 @@
             <x-slot:footerFiles>
                 <script>
                     function spin() {
-                        document.querySelector('.btn-login').innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+                        document.querySelector('.btn-login').innerHTML =
+                            '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
                         document.querySelector('.btn-login').disabled = true;
                         document.querySelector('input[type=email]').readOnly = true;
                         document.querySelector('input[type=password]').readOnly = true;
                         $('form').submit();;
                     }
+
+                    function changeLanguage(element, lang) {
+
+                        $.ajax({
+                            url: '/change-language/' + (lang == "vi" ? "en" : "vi"),
+                            type: 'GET',
+                            data: {
+                                _token: '{{ csrf_token() }}',
+                                lang: lang
+                            },
+                            success: function(data) {
+                                if (lang == 'en') {
+                                    element.src = `{{ Vite::asset('resources/images/1x1/vn.svg') }}`;
+                                } else {
+                                    element.src = `{{ Vite::asset('resources/images/1x1/us.svg') }}`;
+                                }
+                                location.reload();
+                            }
+                        });
+                    }
+                    
                 </script>
                 </x-slot>
                 <!--  END CUSTOM SCRIPTS FILE  -->
