@@ -33,6 +33,8 @@
 
                                                 <h2 class="float-start">{{ trans('auth.login') }}</h2>
                                                 <img style="cursor:pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Change language" onclick="changeLanguage(this,`{{ \App::currentLocale() }}`)" class="float-end" width="16px" src="{{ Vite::asset('resources/images/1x1/' . \App::currentLocale() . '.svg') }}" class="flag-width" alt="flag">
+                                                <!--  make clear float -->
+                                                <div class="clearfix"></div>
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
                                                     <ul>
@@ -46,13 +48,23 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label">{{ trans('auth.email') }}</label>
-                                                    <input type="email" name="email" value="quocthai0099@gmail.com" class="form-control">
+                                                    <input type="email" name="email" autofocus class="form-control @error('email') is-invalid @enderror">
+                                                    <div class="invalid-feedback">
+                                                        @error('email')
+                                                        {{ $message }}
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-4">
                                                     <label class="form-label">{{ trans('auth.password') }}</label>
-                                                    <input type="password" name="password" value="quocthai123" class="form-control">
+                                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror">
+                                                    <div class="invalid-feedback">
+                                                        @error('password')
+                                                        {{ $message }}
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -63,6 +75,8 @@
                                                             {{ trans('auth.remember_me') }}
                                                         </label>
                                                     </div>
+                                                    <a href="" style="cursor:pointer" class="float-end"><i>Quên mật khẩu?</i></a>
+                                                    <div class="clearfix"></div>
                                                 </div>
                                             </div>
 

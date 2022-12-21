@@ -165,7 +165,11 @@
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="avatar-container">
                             <div class="avatar avatar-sm avatar-indicators avatar-online">
+                                @if(auth()->user()->avatar)
+                                    <img alt="avatar" src="{{asset('uploads/'.auth()->user()->avatar)}}" class="rounded-circle">
+                                @else
                                 <img alt="avatar" src="https://ui-avatars.com/api/?name={{auth()->user()->name}}" class="rounded-circle">
+                                @endif
                             </div>
                         </div>
                     </a>

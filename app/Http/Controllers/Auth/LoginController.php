@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\TemporaryFile;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {
@@ -30,30 +32,32 @@ class LoginController extends Controller
             return redirect()->intended('home')
                 ->withSuccess('You have Successfully loggedin!');
         }
-        return redirect("login")->withErrors('Login credentials are not valid!');
+        if(!User::where('email',$request->email)->first()){
+            return redirect()->back()->withErrors(["email" => "Tên tài khoản không tồn tại!"]);
+        }
+        return redirect()->back()->withErrors(["password" => "Email hoặc mật khẩu không đúng!"]);
     }
     public function register(Request $request){
-        // dd($request->all());
-        // $user=$request->validate([
-        //     'name' => 'required',
-        //     'email' => 'required|email|unique:users',
-        //     'password' => 'required|min:6|confirmed'
-        // ]);
-        // $data = $request->all();
-        // $check =  User::create([
-        //     'name' => $user['name'],
-        //     'email' => $user['email'],
-        //     'password' => Hash::make($user['password']),
-        // ]);
-        dd($request->avatar);
-        // $tempFile = TemporaryFile::query()->where('folder',$request->avatar)->first();
-        // dd($tempFile);
-        // auth()->attempt($user);
-        // if(!$check){
-        //     return back()->with('error','Something went wrong, please try again later');
-        // }else{
-        //     return redirect("home")->withSuccess('You have signed-in');
-        // }
+        $user=$request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed'
+        ]);
+        $path = $request->file('avatar')->store('/avatars',[
+            'disk' => 'public',
+        ]);
+        $user =  User::create([
+            'name' => $user['name'],
+            'email' => $user['email'],
+            'password' => Hash::make($user['password']),
+            'avatar' => $path,
+        ]);
+        auth()->login($user);
+        if(!$user){
+            return back()->with('error','Something went wrong, please try again later');
+        }else{
+            return redirect("home")->withSuccess('You have signed-in');
+        }
     }
     // make function logout
     public function logout() {

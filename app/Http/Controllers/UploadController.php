@@ -14,8 +14,8 @@ class UploadController extends Controller
     {
         if ($request->hasFile('avatar')) {
             $file = $request->file('avatar');
-            $filename = uniqid() . '-' . now()->timestamp . '.' . $file->getClientOriginalExtension();
-            $folder = 'avatars';
+            $filename = $file->getClientOriginalName();
+            $folder = 'tmp'.'-'.uniqid();
             $file->storeAs('public/images/'.$folder, $filename);
             TemporaryFile::create([
                 'folder'=>$folder,

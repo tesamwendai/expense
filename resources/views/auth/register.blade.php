@@ -50,7 +50,7 @@
                                 border-radius: 20px;
                                 backdrop-filter: blur(3px);
                             ">
-                                    <form action="{{ route('register') }}" method="post">
+                                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
@@ -70,7 +70,6 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
-                                                    <!-- <input type="text" id="folder"> -->
                                                     <label class="form-label">{{trans('auth.name')}}</label>
                                                     <input type="text" name="name" class="form-control" value="{{ old('name') }}">
                                                 </div>
@@ -96,7 +95,11 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label class="form-label">{{trans('auth.avatar')}}</label>
-                                                    <input type="file" class="filepond" name="avatar" accept="image/*" data-allow-reorder="true" data-max-file-size="3MB">
+                                                    <div class="profile-image">
+                                                        <div class="img-uploader-content">
+                                                            <input type="file" class="filepond" name="avatar" accept="image/*" data-allow-reorder="true" data-max-file-size="3MB">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -179,54 +182,33 @@
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-exif-orientation.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-file-encode.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-preview.js')}}"></script>
-                <!-- <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-crop.js')}}"></script> -->
-                <!-- <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-resize.js')}}"></script> -->
-                <!-- <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-transform.js')}}"></script> -->
-                <!-- <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-edit.js')}}"></script> -->
+                <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-crop.js')}}"></script> -->
+                <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-resize.js')}}"></script>
+                <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-transform.js')}}"></script>
+                <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-edit.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-file-validate-size.js')}}"></script>
 
                 <script src="{{asset('plugins/filepond/cdn/filepond.js')}}"></script>
                 <script>
                     FilePond.registerPlugin(
-
-                        // encodes the file as base64 data
-                        FilePondPluginFileEncode,
-
-                        // validates the size of the file
-                        FilePondPluginFileValidateSize,
-
-                        // corrects mobile image orientation
+                        FilePondPluginFileValidateType,
                         FilePondPluginImageExifOrientation,
-
-                        // previews dropped images
                         FilePondPluginImagePreview,
-
-                        FilePondPluginFileValidateType
+                        FilePondPluginImageCrop,
+                        FilePondPluginImageResize,
+                        FilePondPluginImageTransform,
+                        FilePondPluginImageEdit
                     );
                     FilePond.setOptions({
-                        server: {
-                            // url:'{{route("upload-avatar")}}',
-                            url: '{{ URL::to("")}}',
-                            process: {
-                                url: '/upload-avatar',
-                                method: 'POST',
-                                onload: (response) => {
-                                    console.log('loading');
-                                    enabledBtn('btn-signup');
-                                    $('input[name="avatar"]').val();
-                                    // console.log(JSON.parse(JSON.parse(response).data).temp_path);
-                                },
-                                ondata: (formData) => {
-                                    console.log(formData);    
-                                    disabledBtn('btn-signup');
-                                    return formData;
-                                },
-                            },
-                            revert: '/revert-avatar',
-                            headers: {
-                                'X-CSRF-TOKEN': '{{csrf_token()}}'
-                            }
-                        },
+                        imagePreviewHeight: 170,
+                        imageCropAspectRatio: '1:1',
+                        imageResizeTargetWidth: 200,
+                        imageResizeTargetHeight: 200,
+                        stylePanelLayout: 'compact circle',
+                        styleLoadIndicatorPosition: 'center bottom',
+                        styleProgressIndicatorPosition: 'right bottom',
+                        styleButtonRemoveItemPosition: 'left bottom',
+                        styleButtonProcessItemPosition: 'right bottom',
 
                         labelIdle: '{!!trans("auth.file_pond.labelIdle")!!}',
                         labelFileWaitingForSize: '{{trans("auth.file_pond.labelFileWaitingForSize")}}',
@@ -241,7 +223,7 @@
 
                         labelFileProcessingComplete: '{{trans("auth.file_pond.labelFileProcessingComplete")}}',
                         labelFileProcessingAborted: '{{trans("auth.file_pond.labelFileProcessingAborted")}}',
-                        labelTapToUndo:'{{trans("auth.file_pond.labelTapToUndo")}}',
+                        labelTapToUndo: '{{trans("auth.file_pond.labelTapToUndo")}}',
                         labelTapToCancel: '{{trans("auth.file_pond.labelTapToCancel")}}',
 
 
@@ -250,7 +232,9 @@
                     // Select the file input and use 
                     // create() to turn it into a pond
                     FilePond.create(
-                        document.querySelector('.filepond')
+                        document.querySelector('.filepond'), {
+                            storeAsFile: true,
+                        }
                     );
 
                     function changeLanguage(element, lang) {
