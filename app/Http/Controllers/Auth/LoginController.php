@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\TemporaryFile;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -33,23 +34,26 @@ class LoginController extends Controller
     }
     public function register(Request $request){
         // dd($request->all());
-        $user=$request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
-        ]);
+        // $user=$request->validate([
+        //     'name' => 'required',
+        //     'email' => 'required|email|unique:users',
+        //     'password' => 'required|min:6|confirmed'
+        // ]);
         // $data = $request->all();
-        $check =  User::create([
-            'name' => $user['name'],
-            'email' => $user['email'],
-            'password' => Hash::make($user['password']),
-        ]);
-        auth()->attempt($user);
-        if(!$check){
-            return back()->with('error','Something went wrong, please try again later');
-        }else{
-            return redirect("home")->withSuccess('You have signed-in');
-        }
+        // $check =  User::create([
+        //     'name' => $user['name'],
+        //     'email' => $user['email'],
+        //     'password' => Hash::make($user['password']),
+        // ]);
+        dd($request->avatar);
+        // $tempFile = TemporaryFile::query()->where('folder',$request->avatar)->first();
+        // dd($tempFile);
+        // auth()->attempt($user);
+        // if(!$check){
+        //     return back()->with('error','Something went wrong, please try again later');
+        // }else{
+        //     return redirect("home")->withSuccess('You have signed-in');
+        // }
     }
     // make function logout
     public function logout() {

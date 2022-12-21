@@ -56,8 +56,8 @@
                                             <div class="col-md-12 mb-3">
                                                 <h2 class="float-start">{{trans('auth.register')}}</h2>
                                                 <img style="cursor:pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Change language" onclick="changeLanguage(this,`{{\App::currentLocale()}}`)" class="float-end flag-width" width="16px" src="{{Vite::asset('resources/images/1x1/'.\App::currentLocale().'.svg')}}" alt="flag">
-                                                {{-- <a href="{!! route('change-language', ['en']) !!}">English</a> --}}
-                                                {{-- <a href="/change-language/vi">Vietnam</a> --}}
+                                                <!-- make clear float -->
+                                                <div class="clearfix"></div>
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
                                                     <ul>
@@ -70,27 +70,27 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
-                                                    <input type="text" id="folder">
+                                                    <!-- <input type="text" id="folder"> -->
                                                     <label class="form-label">{{trans('auth.name')}}</label>
-                                                    <input type="text" name="name" class="form-control ">
+                                                    <input type="text" name="name" class="form-control" value="{{ old('name') }}">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label">{{trans('auth.email')}}</label>
-                                                    <input type="email" name="email" class="form-control">
+                                                    <input type="email" name="email" class="form-control" value="{{old('email')}}">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label class="form-label">{{trans('auth.password')}}</label>
-                                                    <input type="text" name="password" class="form-control">
+                                                    <input type="password" name="password" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <label class="form-label">{{trans('auth.confirm_password')}}</label>
-                                                    <input type="text" name="password_confirmation" class="form-control">
+                                                    <input type="password" name="password_confirmation" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -112,7 +112,7 @@
 
                                             <div class="col-12">
                                                 <div class="mb-4">
-                                                    <button type="submit" class="btn btn-secondary w-100">{{trans('auth.btn-signup')}}</button>
+                                                    <button type="submit" class="btn-signup btn btn-secondary w-100">{{trans('auth.btn-signup')}}</button>
                                                 </div>
                                             </div>
 
@@ -124,7 +124,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
 
                                             <div class="col-sm-4 col-12">
                                                 <div class="mb-4">
@@ -174,6 +174,7 @@
 
             <!--  BEGIN CUSTOM SCRIPTS FILE  -->
             <x-slot:footerFiles>
+                <script src="{{asset('plugins/main.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-file-validate-type.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-image-exif-orientation.js')}}"></script>
                 <script src="{{asset('plugins/filepond/cdn/filepond-plugin-file-encode.js')}}"></script>
@@ -205,20 +206,28 @@
                     FilePond.setOptions({
                         server: {
                             // url:'{{route("upload-avatar")}}',
-                            url:'{{ URL::to("")}}',
-                            process:{
-                                url:'/upload-avatar',
-                                method:'POST',
-                                onload:(response)=>{
-
+                            url: '{{ URL::to("")}}',
+                            process: {
+                                url: '/upload-avatar',
+                                method: 'POST',
+                                onload: (response) => {
+                                    console.log('loading');
+                                    enabledBtn('btn-signup');
+                                    $('input[name="avatar"]').val();
                                     // console.log(JSON.parse(JSON.parse(response).data).temp_path);
                                 },
+                                ondata: (formData) => {
+                                    console.log(formData);    
+                                    disabledBtn('btn-signup');
+                                    return formData;
+                                },
                             },
-                            revert:'/revert-avatar',
-                            headers:{
-                                'X-CSRF-TOKEN':'{{csrf_token()}}'
+                            revert: '/revert-avatar',
+                            headers: {
+                                'X-CSRF-TOKEN': '{{csrf_token()}}'
                             }
                         },
+
                         labelIdle: '{!!trans("auth.file_pond.labelIdle")!!}',
                         labelFileWaitingForSize: '{{trans("auth.file_pond.labelFileWaitingForSize")}}',
                         labelFileSizeNotAvailable: '{{trans("auth.file_pond.labelFileSizeNotAvailable")}}',
@@ -232,9 +241,10 @@
 
                         labelFileProcessingComplete: '{{trans("auth.file_pond.labelFileProcessingComplete")}}',
                         labelFileProcessingAborted: '{{trans("auth.file_pond.labelFileProcessingAborted")}}',
+                        labelTapToUndo:'{{trans("auth.file_pond.labelTapToUndo")}}',
                         labelTapToCancel: '{{trans("auth.file_pond.labelTapToCancel")}}',
 
-                        
+
 
                     });
                     // Select the file input and use 

@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
@@ -34,6 +35,13 @@ Route::group(['middleware' => 'language'], function() {
 // make route upload image
 Route::post('upload-avatar', [UploadController::class, 'processAvatar'])->name('upload-avatar');
 Route::delete('revert-avatar', [UploadController::class, 'revertAvatar'])->name('revert-avatar');
+
+// make arisan command
+Route::get('clear',function(){
+    Artisan::call('optimize:clear');
+    return "Cache is cleared";
+});
+Route::get('clear-storage', [UploadController::class, 'revertAvatar'])->name('revert-avatar');
 
 
 

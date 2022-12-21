@@ -18,3 +18,11 @@ function removeSpin(classname,...input) {
         document.querySelector('input[name='+element+']').readOnly = false;
     });
 }
+function disabledBtn(classname){
+    let button =document.querySelector('.'+classname);
+    button.disabled = true;
+}
+function enabledBtn(classname){
+    let button =document.querySelector('.'+classname);
+    button.disabled = false;
+}

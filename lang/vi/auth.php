@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Thông tin bạn cung cấp không đúng! Vui lòng thử lại :(.',
+    'password' => 'Mật khẩu bạn nhập không chính xác.',
+    'throttle' => 'Bạn đã thử đăng nhập quá nhiều lần. Vui long thử lại sau :seconds giây.',
 
     'register'=>'Đăng ký',
     'login'=>'Đăng nhập',
@@ -33,6 +33,7 @@ return [
         'labelTapToRetry'=>'Nhấn để thử lại',
         'labelFileProcessingComplete' => 'Tải lên hoàn tất',
         'labelFileProcessingAborted' => 'Tải lên bị hủy',
+        'labelTapToUndo'=>'Nhấn để hoàn tác',
         'labelTapToCancel'=>'Nhấn để hủy',
     ],
     'name'=>'Tên người dùng',
