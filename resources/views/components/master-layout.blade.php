@@ -45,7 +45,8 @@ $isAltMenu=0;
 
     // Real Logins and Register
     !Request::routeIs('login') &&
-    !Request::routeIs('register')
+    !Request::routeIs('register') &&
+    !Request::routeIs('password.request')
     )
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/waves/waves.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/highlight/styles/monokai-sublime.css')}}">
@@ -93,7 +94,10 @@ $isAltMenu=0;
 
     // Real Logins
     !Request::routeIs('login') &&
-    !Request::routeIs('register')
+    !Request::routeIs('register') &&
+    !Request::routeIs('password.request') &&
+    !Request::routeIs('password.reset')
+
     )
 
     @if (!Request::routeIs('blank'))
@@ -147,7 +151,8 @@ $isAltMenu=0;
 
     // Real Logins & Real Register
     !Request::routeIs('login') &&
-    !Request::routeIs('register')
+    !Request::routeIs('register') &&
+    !Request::routeIs('password.request')
     )
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <script src="{{asset('plugins/bootstrap/bootstrap.bundle.min.js')}}"></script>

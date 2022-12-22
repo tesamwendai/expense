@@ -48,4 +48,10 @@ return [
     'or_continue_with'=>'Hoặc tiếp tục với',
     'already_have_account'=>'Bạn đã có tài khoản?',
     'dont_have_account'=>'Bạn chưa có tài khoản?',
+
+    'forgot_password' => 'Quên mật khẩu?',
+    'reset_password' => 'Khôi phục mật khẩu',
+    'not_receive_email' => 'Không nhận được email?',
+    'resent'=>'Gửi lại',
+    // 'send_password_reset_link' => 'Gửi liên kết khôi phục mật khẩu',
 ];

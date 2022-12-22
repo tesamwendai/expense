@@ -1,6 +1,6 @@
 <x-master-layout>
     <x-slot:pageTitle>
-        {{ __('Login') }}
+        {{ __('Forgot password') }}
         </x-slot>
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -15,7 +15,7 @@
                 style="border:'none';background: url({{ Vite::asset('resources/images/background-image-1.jpg') }});background-repeat:no-repeat;background-size:cover">
 
                 <div class="container mx-auto align-self-center">
-                    <form action="{{ 'login' }}" method="post">
+                    <form action="{{ route('password.email') }}" method="post">
                         @csrf
                         <div class="row">
                             <div
@@ -35,7 +35,7 @@
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
 
-                                                <h2 class="float-start">{{ trans('auth.login') }}</h2>
+                                                <h2 class="float-start">{{ trans('auth.reset_password') }}</h2>
                                                 <img style="cursor:pointer" data-bs-toggle="tooltip"
                                                     data-bs-placement="top" title="Change language"
                                                     onclick="changeLanguage(this,`{{ \App::currentLocale() }}`)"
@@ -44,18 +44,9 @@
                                                     class="flag-width" alt="flag">
                                                 <!--  make clear float -->
                                                 <div class="clearfix"></div>
-                                                @if ($errors->any())
-                                                    <div class="alert alert-danger">
-                                                        <ul>
-                                                            @foreach ($errors->all() as $error)
-                                                                <li>{{ $error }}</li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
-                                                @endif
-                                                @if (Session::has('success'))
+                                                @if (Session::has('status'))
                                                     <p class="alert alert-success }}">
-                                                        {{ Session::get('success') }}</p>
+                                                        {{ Session::get('status') }}</p>
                                                 @endif
                                             </div>
                                             <div class="col-md-12">
@@ -70,14 +61,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
+                                            {{-- <div class="col-12">
                                                 <div class="mb-4">
                                                     <label class="form-label">{{ trans('auth.password') }}</label>
-                                                    <input type="password" name="password"
-                                                        class="form-control @error('password') is-invalid @enderror">
+                                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror">
                                                     <div class="invalid-feedback">
                                                         @error('password')
-                                                            {{ $message }}
+                                                        {{ $message }}
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -85,27 +75,24 @@
                                             <div class="col-12">
                                                 <div class="mb-3">
                                                     <div class="form-check form-check-primary form-check-inline">
-                                                        <input class="form-check-input me-3" type="checkbox"
-                                                            id="form-check-default">
-                                                        <label class="form-check-label" name="remember_me"
-                                                            for="form-check-default">
+                                                        <input class="form-check-input me-3" type="checkbox" id="form-check-default">
+                                                        <label class="form-check-label" name="remember_me" for="form-check-default">
                                                             {{ trans('auth.remember_me') }}
                                                         </label>
                                                     </div>
-                                                    <a href="/forgot-password" style="cursor:pointer"
-                                                        class="float-end"><i>{{ trans('auth.forgot_password') }}</i></a>
+                                                    <a href="/forgot-password" style="cursor:pointer" class="float-end"><i>Quên mật khẩu?</i></a>
                                                     <div class="clearfix"></div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
                                             <div class="col-12">
                                                 <div class="mb-4">
                                                     <button type="submit" onclick="spin()"
-                                                        class="btn btn-secondary w-100 btn-login">{{ trans('auth.login') }}</button>
+                                                        class="btn btn-secondary w-100 btn-send-mail">{{ trans('auth.reset_password') }}</button>
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 mb-4">
+                                            {{-- <div class="col-12 mb-4">
                                                 <div class="">
                                                     <div class="seperator">
                                                         <hr>
@@ -119,8 +106,7 @@
                                             <div class="col-sm-4 col-12">
                                                 <div class="mb-4">
                                                     <button class="btn  btn-social-login w-100 ">
-                                                        <img src="{{ Vite::asset('resources/images/google-gmail.svg') }}"
-                                                            alt="" class="img-fluid">
+                                                        <img src="{{ Vite::asset('resources/images/google-gmail.svg') }}" alt="" class="img-fluid">
                                                         <span class="btn-text-inner">Google</span>
                                                     </button>
                                                 </div>
@@ -129,8 +115,7 @@
                                             <div class="col-sm-4 col-12">
                                                 <div class="mb-4">
                                                     <button class="btn  btn-social-login w-100">
-                                                        <img src="{{ Vite::asset('resources/images/github-icon.svg') }}"
-                                                            alt="" class="img-fluid">
+                                                        <img src="{{ Vite::asset('resources/images/github-icon.svg') }}" alt="" class="img-fluid">
                                                         <span class="btn-text-inner">Github</span>
                                                     </button>
                                                 </div>
@@ -139,18 +124,17 @@
                                             <div class="col-sm-4 col-12">
                                                 <div class="mb-4">
                                                     <button class="btn  btn-social-login w-100">
-                                                        <img src="{{ Vite::asset('resources/images/twitter.svg') }}"
-                                                            alt="" class="img-fluid">
+                                                        <img src="{{ Vite::asset('resources/images/twitter.svg') }}" alt="" class="img-fluid">
                                                         <span class="btn-text-inner">Twitter</span>
                                                     </button>
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
                                             <div class="col-12">
                                                 <div class="text-center">
-                                                    <p class="mb-0">{{ trans('auth.dont_have_account') }} <a
+                                                    <p class="mb-0">{{ trans('auth.not_receive_email') }} <a
                                                             href="{{ route('register') }}" class="text-success">
-                                                            {{ trans('auth.register') }}</a>
+                                                            {{ trans('auth.resent') }}</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -172,14 +156,16 @@
             <x-slot:footerFiles>
                 <script>
                     function spin() {
-                        document.querySelector('.btn-login').innerHTML =
-                            '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
-                        document.querySelector('.btn-login').disabled = true;
+                        document.querySelector('.btn-send-mail').innerHTML =
+                            '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+                        document.querySelector('.btn-send-mail').disabled = true;
                         document.querySelector('input[type=email]').readOnly = true;
-                        document.querySelector('input[type=password]').readOnly = true;
-                        $('form').submit();;
+                        // document.querySelector('input[type=password]').readOnly = true;
+                        $('form').submit();
                     }
-
+                    function resentEmail(){
+                        $('form').submit();
+                    }
                     function changeLanguage(element, lang) {
 
                         $.ajax({

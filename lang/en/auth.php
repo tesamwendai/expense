@@ -48,4 +48,12 @@ return [
     'or_continue_with' => 'Or continue with',
     'already_have_account' => 'Already have an account?',
     'dont_have_account' => 'Don\'t have an account?',
+
+    'forgot_password' => 'Forgot Password?',
+    'reset_password' => 'Reset Password',
+    'not_receive_email' => 'Didn\'t receive an email?',
+    'resent'=>'Resend',
+
+    
+    // 'send_password_reset_link' => 'Send password reset link',
 ];

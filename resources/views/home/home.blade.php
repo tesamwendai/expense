@@ -20,7 +20,8 @@
                         @if(session('success'))
                         <h1>{{session('success')}}</h1>
                         @endif
-                        <h1>Hello <strong style="color:purple">{{auth()->user()->name}}</strong>! Welcome to my website </h1>
+                        {{-- <h1>Hello <strong style="color:purple">{{auth()->user()->name}}</strong>! Welcome to my website </h1> --}}
+                        <h1>{!!trans('home.welcome',['name'=>"Thái",'app'=>'Expense app'])!!}</h1>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Icon-Mac.svg" width="32px" alt="">
                     </div>
                     <div class="widget-content widget-content-area">
