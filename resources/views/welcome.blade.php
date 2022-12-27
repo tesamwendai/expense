@@ -289,12 +289,11 @@
 			</svg>
 		</div>
 
-		<section class="bottom-copy">
-			<div class="dpd-20">
+		<!-- <section class="bottom-copy">
+			<div class="">
 				<img src="{{ asset('favicon.png') }}" alt="logo.png"/>
 			</div>
 			<div>&copy; 2022 Quốc Thái Developer</div>
-		</section>
-
+		</section> -->
 	</body>
 </html>
